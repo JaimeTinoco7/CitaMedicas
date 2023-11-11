@@ -80,6 +80,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
@@ -168,6 +173,13 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
