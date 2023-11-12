@@ -12,6 +12,9 @@ import java.util.Date;
  */
 public class Cita {
     
+    //atributos
+    
+    
     private int id;
     private Date fechaHora;
     private InformeMedico informeMedico;
