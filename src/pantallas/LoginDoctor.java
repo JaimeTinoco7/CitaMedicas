@@ -95,51 +95,6 @@ public class LoginDoctor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-                                   
-    boolean usuarioEncontrado = false;
-    Usuario usuarioAutenticado = null;
-
-    try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
-        while (scanner.hasNextLine()) {
-            String line = scanner.nextLine();
-            String[] userData = line.split(",");
-
-            if (userData.length >= 5 && txtCorreo.getText().equals(userData[3])
-                    && txtPassword.getText().equals(userData[4])) {
-                usuarioAutenticado = new Usuario(userData[0], 
-                        userData[1], userData[2], userData[3]);
-                usuarioEncontrado = true;
-                break;
-            }
-        }
-    } catch (FileNotFoundException ex) {
-        ex.printStackTrace();
-        JOptionPane.showMessageDialog(this, 
-                "Error al abrir el archivo de usuarios.", "Error", 
-                JOptionPane.ERROR_MESSAGE);
-    }
-
-    if (usuarioEncontrado && usuarioAutenticado != null) {
-        JOptionPane.showMessageDialog(this, "¡Bienvenido!",
-                "Inicio de sesión exitoso",
-                JOptionPane.INFORMATION_MESSAGE);
-
-        MenuUsuario pantalla = new MenuUsuario();
-        pantalla.setUsuarioAutenticado(usuarioAutenticado);
-        pantalla.setVisible(true);
-        this.dispose();
-    } else {
-        int respuesta = JOptionPane.showConfirmDialog(this, 
-                "Usuario o contraseña incorrectos. ¿Desea crear una cuenta?", 
-                "Error de inicio de sesión", 
-                JOptionPane.YES_NO_OPTION, 
-                JOptionPane.ERROR_MESSAGE);
-        if (respuesta == JOptionPane.YES_OPTION) {
-            RegisterUsuario pantalla = new RegisterUsuario();
-            pantalla.setVisible(true);
-            this.dispose();
-        }
-    }
 
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
