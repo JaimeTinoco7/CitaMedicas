@@ -4,17 +4,32 @@
  */
 package pantallas;
 
+import entidades.Usuario;
+
 /**
  *
  * @author jaime
  */
 public class SobreNosotros extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InicioPantalla
-     */
+    private Usuario usuarioAutenticado;
+    
     public SobreNosotros() {
         initComponents();
+    }
+    
+     public void setUsuarioAutenticado(Usuario usuario) {
+        this.usuarioAutenticado = usuario;
+        actualizarNombreUsuario();
+    }
+
+      private void actualizarNombreUsuario() {
+        if (usuarioAutenticado != null) {
+            String nombreUsuario = usuarioAutenticado.getNombre();
+            String apellidosUsuario = usuarioAutenticado.getApellidos();
+            jMenuUsuario.setText("Usuario: " + nombreUsuario +
+                    " " + apellidosUsuario);
+        }
     }
 
     /**
@@ -27,22 +42,32 @@ public class SobreNosotros extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
+        jMenuUsuario = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,60 +75,102 @@ public class SobreNosotros extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(13, 143, 131));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DoctorImagen.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 320, 160));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/¿Buscas una experiencia médica centrada en ti_ (1).png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 330, 20));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Agendar Cita.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 160, 40));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/En MediPlus, ofrecemos atención médica de calidad con un toque personal. Nuestro equipo está aquí para atender tus necesidades de salud y garantizar tu bienestar. (1).png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 380, 90));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10-10-2023.png"))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 130, 30));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 100, 40));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dOCiMAGEn.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 320, 160));
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 250, 40));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/¿Necesitas atención médica conveniente y de calidad_ (1).png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 380, 20));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 250, 40));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/En MediPlus, comprendemos la importancia de tu bienestar. Nuestra clínica de citas médicas, diseñada pensando en ti , ofrece instalaciones modernas y un equipo comprometido. Descubre una forma más fácil y amigable de cuidar tu salud..png"))); // NOI18N
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 380, 90));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 250, 40));
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10-11.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 130, 30));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 140, 40));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 620));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.setFocusable(false);
+        jMenuBar1.setOpaque(true);
+        jMenuBar1.setPreferredSize(new java.awt.Dimension(70, 65));
+        jMenuBar1.setRequestFocusEnabled(false);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 250, 190));
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoMenu.png"))); // NOI18N
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu3.setPreferredSize(new java.awt.Dimension(65, 65));
+        jMenu3.add(jSeparator6);
 
-        jLabel5.setText("Nombre:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        jMenuUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Perfil.png"))); // NOI18N
+        jMenuUsuario.setText("Usuario");
+        jMenuUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jMenuUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jMenuUsuario.setPreferredSize(new java.awt.Dimension(300, 85));
+        jMenu3.add(jMenuUsuario);
+        jMenu3.add(jSeparator7);
 
-        jLabel6.setText("Apellidos:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Mnu.png"))); // NOI18N
+        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem1.setEnabled(false);
+        jMenuItem1.setPreferredSize(new java.awt.Dimension(160, 50));
+        jMenu3.add(jMenuItem1);
+        jMenu3.add(jSeparator2);
 
-        jLabel3.setText("Lista de Doctores:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Edtar.png"))); // NOI18N
+        jMenuItem2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem2.setPreferredSize(new java.awt.Dimension(160, 50));
+        jMenu3.add(jMenuItem2);
+        jMenu3.add(jSeparator1);
 
-        jLabel4.setText("Fecha y Hora:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerCita.png"))); // NOI18N
+        jMenuItem3.setPreferredSize(new java.awt.Dimension(191, 50));
+        jMenu3.add(jMenuItem3);
+        jMenu3.add(jSeparator3);
 
-        jLabel7.setText("Sintomas:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (2).png"))); // NOI18N
+        jMenuItem4.setPreferredSize(new java.awt.Dimension(230, 50));
+        jMenu3.add(jMenuItem4);
+        jMenu3.add(jSeparator5);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnGuardar.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, 110, 50));
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros2.png"))); // NOI18N
+        jMenuItem5.setPreferredSize(new java.awt.Dimension(202, 50));
+        jMenu3.add(jMenuItem5);
+        jMenu3.add(jSeparator4);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 610));
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CerrarSession.png"))); // NOI18N
+        jMenuItem6.setPreferredSize(new java.awt.Dimension(202, 50));
+        jMenu3.add(jMenuItem6);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu1.setBackground(new java.awt.Color(242, 242, 242));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MenuLogo.png"))); // NOI18N
+        jMenu1.setBorderPainted(false);
+        jMenu1.setFocusable(false);
+        jMenu1.setPreferredSize(new java.awt.Dimension(65, 65));
+        jMenu1.setRequestFocusEnabled(false);
+        jMenu1.setRolloverEnabled(false);
+        jMenu1.setVerifyInputWhenFocusTarget(false);
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setBackground(new java.awt.Color(242, 242, 242));
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MenuLogoo.png"))); // NOI18N
+        jMenu2.setMinimumSize(new java.awt.Dimension(200, 200));
+        jMenu2.setPreferredSize(new java.awt.Dimension(300, 200));
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -207,22 +274,32 @@ public class SobreNosotros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuUsuario;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
+    private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JPopupMenu.Separator jSeparator7;
     // End of variables declaration//GEN-END:variables
 }
