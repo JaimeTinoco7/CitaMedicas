@@ -14,6 +14,7 @@ public class AgendarCita extends javax.swing.JFrame {
      * Creates new form InicioPantalla
      */
     public AgendarCita() {
+        //init
         initComponents();
     }
 
