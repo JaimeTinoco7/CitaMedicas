@@ -26,56 +26,56 @@ public class InicioPantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        pnlCentral = new javax.swing.JPanel();
+        lblImagen = new javax.swing.JLabel();
+        lblMediPlus = new javax.swing.JLabel();
+        lblAutomanager = new javax.swing.JLabel();
+        lblLema = new javax.swing.JLabel();
+        lblDoctor = new javax.swing.JLabel();
+        lblPaciente = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus_logo1.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 270, 270));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus_logo1.png"))); // NOI18N
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 270, 270));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 330, 60));
+        lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+.png"))); // NOI18N
+        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 330, 60));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 310, 30));
+        lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R.png"))); // NOI18N
+        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 310, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/_Brindando Cuidado y Salud de Calidad_ Mediplus, su Clínica de Confianza_.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 340, 90));
+        lblLema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/_Brindando Cuidado y Salud de Calidad_ Mediplus, su Clínica de Confianza_.png"))); // NOI18N
+        pnlCentral.add(lblLema, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 340, 90));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnDoctorr.png"))); // NOI18N
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 160, 50));
+        lblDoctor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnDoctorr.png"))); // NOI18N
+        lblDoctor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlCentral.add(lblDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 160, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPacient.png"))); // NOI18N
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPacient.png"))); // NOI18N
+        lblPaciente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                lblPacienteMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 150, 50));
+        pnlCentral.add(lblPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 150, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void lblPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPacienteMouseClicked
         RegisterUsuario pantalla = new  RegisterUsuario();
         pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(this);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_lblPacienteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -113,12 +113,12 @@ public class InicioPantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblAutomanager;
+    private javax.swing.JLabel lblDoctor;
+    private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblLema;
+    private javax.swing.JLabel lblMediPlus;
+    private javax.swing.JLabel lblPaciente;
+    private javax.swing.JPanel pnlCentral;
     // End of variables declaration//GEN-END:variables
 }

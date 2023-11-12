@@ -32,69 +32,69 @@ public class LoginUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        pnlCentral = new javax.swing.JPanel();
+        lblImagen = new javax.swing.JLabel();
+        lblMediPlus = new javax.swing.JLabel();
+        lblAutomanager = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        lblCorreoF = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
+        lblPasswordF = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        lblIniciarSesion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo2.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 210, 220));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo2.png"))); // NOI18N
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 210, 220));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 250, 40));
+        lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
+        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 250, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 320, 30));
+        lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
+        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 320, 30));
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, 20));
+        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, 20));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, 40));
+        lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, 40));
 
         txtPassword.setBackground(new java.awt.Color(217, 217, 217));
         txtPassword.setBorder(null);
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 20));
+        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 20));
 
-        jLabel11.setText("Correo");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
+        lblCorreo.setText("Correo");
+        pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, 40));
+        lblPasswordF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, 40));
 
-        jLabel13.setText("Contraseña:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
+        lblPassword.setText("Contraseña:");
+        pnlCentral.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnLogin.png"))); // NOI18N
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel18.setFocusable(false);
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblIniciarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnLogin.png"))); // NOI18N
+        lblIniciarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblIniciarSesion.setFocusable(false);
+        lblIniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel18MouseClicked(evt);
+                lblIniciarSesionMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, -1, 40));
+        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, -1, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+    private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
                                    
     boolean usuarioEncontrado = false;
     Usuario usuarioAutenticado = null;
@@ -142,7 +142,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
 
-    }//GEN-LAST:event_jLabel18MouseClicked
+    }//GEN-LAST:event_lblIniciarSesionMouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,15 +187,15 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblAutomanager;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblCorreoF;
+    private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblIniciarSesion;
+    private javax.swing.JLabel lblMediPlus;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPasswordF;
+    private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables

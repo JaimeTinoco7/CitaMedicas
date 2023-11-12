@@ -40,16 +40,16 @@ public class MenuUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
+        pnlCentral = new javax.swing.JPanel();
+        lblInfoLab = new javax.swing.JLabel();
+        lblListaCitas = new javax.swing.JLabel();
+        lblAgendarCita = new javax.swing.JLabel();
+        lblBuscarDoc = new javax.swing.JLabel();
+        lblSobreNosotros = new javax.swing.JLabel();
+        lblImagen = new javax.swing.JLabel();
+        lblContactos = new javax.swing.JLabel();
+        mbMenuPrincipal = new javax.swing.JMenuBar();
+        mbMenuPrincipal1 = new javax.swing.JMenu();
         jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuUsuario = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
@@ -70,88 +70,88 @@ public class MenuUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerResultados.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 100, 90));
+        lblInfoLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerResultados.png"))); // NOI18N
+        pnlCentral.add(lblInfoLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 100, 90));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ListaDeCitas.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
+        lblListaCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ListaDeCitas.png"))); // NOI18N
+        pnlCentral.add(lblListaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
+        lblAgendarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
+        pnlCentral.add(lblAgendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 100, 90));
+        lblBuscarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
+        pnlCentral.add(lblBuscarDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 100, 90));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 100, 90));
+        lblSobreNosotros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
+        pnlCentral.add(lblSobreNosotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 100, 90));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImagenPacienteDoctor.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 360, 180));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImagenPacienteDoctor.png"))); // NOI18N
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 360, 180));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos.png"))); // NOI18N
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos.png"))); // NOI18N
+        lblContactos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                lblContactosMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 100, 90));
+        pnlCentral.add(lblContactos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 100, 90));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 760));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 760));
 
-        jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jMenuBar1.setFocusable(false);
-        jMenuBar1.setOpaque(true);
-        jMenuBar1.setPreferredSize(new java.awt.Dimension(70, 65));
-        jMenuBar1.setRequestFocusEnabled(false);
+        mbMenuPrincipal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        mbMenuPrincipal.setFocusable(false);
+        mbMenuPrincipal.setOpaque(true);
+        mbMenuPrincipal.setPreferredSize(new java.awt.Dimension(70, 65));
+        mbMenuPrincipal.setRequestFocusEnabled(false);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoMenu.png"))); // NOI18N
-        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenu3.setPreferredSize(new java.awt.Dimension(65, 65));
-        jMenu3.add(jSeparator6);
+        mbMenuPrincipal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoMenu.png"))); // NOI18N
+        mbMenuPrincipal1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mbMenuPrincipal1.setPreferredSize(new java.awt.Dimension(65, 65));
+        mbMenuPrincipal1.add(jSeparator6);
 
         jMenuUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Perfil.png"))); // NOI18N
         jMenuUsuario.setText("Usuario");
         jMenuUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jMenuUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jMenuUsuario.setPreferredSize(new java.awt.Dimension(300, 85));
-        jMenu3.add(jMenuUsuario);
-        jMenu3.add(jSeparator7);
+        mbMenuPrincipal1.add(jMenuUsuario);
+        mbMenuPrincipal1.add(jSeparator7);
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Mnu.png"))); // NOI18N
         jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem1.setPreferredSize(new java.awt.Dimension(160, 50));
-        jMenu3.add(jMenuItem1);
-        jMenu3.add(jSeparator2);
+        mbMenuPrincipal1.add(jMenuItem1);
+        mbMenuPrincipal1.add(jSeparator2);
 
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Edtar.png"))); // NOI18N
         jMenuItem2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem2.setPreferredSize(new java.awt.Dimension(160, 50));
-        jMenu3.add(jMenuItem2);
-        jMenu3.add(jSeparator1);
+        mbMenuPrincipal1.add(jMenuItem2);
+        mbMenuPrincipal1.add(jSeparator1);
 
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerCita.png"))); // NOI18N
         jMenuItem3.setPreferredSize(new java.awt.Dimension(191, 50));
-        jMenu3.add(jMenuItem3);
-        jMenu3.add(jSeparator3);
+        mbMenuPrincipal1.add(jMenuItem3);
+        mbMenuPrincipal1.add(jSeparator3);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (2).png"))); // NOI18N
         jMenuItem4.setPreferredSize(new java.awt.Dimension(230, 50));
-        jMenu3.add(jMenuItem4);
-        jMenu3.add(jSeparator5);
+        mbMenuPrincipal1.add(jMenuItem4);
+        mbMenuPrincipal1.add(jSeparator5);
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros2.png"))); // NOI18N
         jMenuItem5.setPreferredSize(new java.awt.Dimension(202, 50));
-        jMenu3.add(jMenuItem5);
-        jMenu3.add(jSeparator4);
+        mbMenuPrincipal1.add(jMenuItem5);
+        mbMenuPrincipal1.add(jSeparator4);
 
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CerrarSession.png"))); // NOI18N
         jMenuItem6.setPreferredSize(new java.awt.Dimension(202, 50));
-        jMenu3.add(jMenuItem6);
+        mbMenuPrincipal1.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu3);
+        mbMenuPrincipal.add(mbMenuPrincipal1);
 
         jMenu1.setBackground(new java.awt.Color(242, 242, 242));
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MenuLogo.png"))); // NOI18N
@@ -161,26 +161,26 @@ public class MenuUsuario extends javax.swing.JFrame {
         jMenu1.setRequestFocusEnabled(false);
         jMenu1.setRolloverEnabled(false);
         jMenu1.setVerifyInputWhenFocusTarget(false);
-        jMenuBar1.add(jMenu1);
+        mbMenuPrincipal.add(jMenu1);
 
         jMenu2.setBackground(new java.awt.Color(242, 242, 242));
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MenuLogoo.png"))); // NOI18N
         jMenu2.setMinimumSize(new java.awt.Dimension(200, 200));
         jMenu2.setPreferredSize(new java.awt.Dimension(300, 200));
-        jMenuBar1.add(jMenu2);
+        mbMenuPrincipal.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(mbMenuPrincipal);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void lblContactosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblContactosMouseClicked
         
         ContactanosUsuario pantalla = new ContactanosUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }//GEN-LAST:event_lblContactosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -233,17 +233,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -251,7 +242,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuUsuario;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
@@ -259,5 +249,15 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JPopupMenu.Separator jSeparator6;
     private javax.swing.JPopupMenu.Separator jSeparator7;
+    private javax.swing.JLabel lblAgendarCita;
+    private javax.swing.JLabel lblBuscarDoc;
+    private javax.swing.JLabel lblContactos;
+    private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblInfoLab;
+    private javax.swing.JLabel lblListaCitas;
+    private javax.swing.JLabel lblSobreNosotros;
+    private javax.swing.JMenuBar mbMenuPrincipal;
+    private javax.swing.JMenu mbMenuPrincipal1;
+    private javax.swing.JPanel pnlCentral;
     // End of variables declaration//GEN-END:variables
 }

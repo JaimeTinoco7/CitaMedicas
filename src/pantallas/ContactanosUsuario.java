@@ -26,53 +26,53 @@ public class ContactanosUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        pnlCentral = new javax.swing.JPanel();
+        pnlColor = new javax.swing.JPanel();
+        lblRegreso = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
+        lblFacebook = new javax.swing.JLabel();
+        lblWhatsApp = new javax.swing.JLabel();
+        lblInstagram = new javax.swing.JLabel();
+        lblYoutube = new javax.swing.JLabel();
+        lblTikTok = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(13, 143, 131));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlColor.setBackground(new java.awt.Color(13, 143, 131));
+        pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (1).png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 180, 50));
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (1).png"))); // NOI18N
+        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 180, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 330, 80));
+        lblCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
+        pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 330, 80));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fb.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 330, 70));
+        lblFacebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fb.png"))); // NOI18N
+        pnlCentral.add(lblFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 330, 70));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wsp.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 330, 70));
+        lblWhatsApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wsp.png"))); // NOI18N
+        pnlCentral.add(lblWhatsApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 330, 70));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ig.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 330, 70));
+        lblInstagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ig.png"))); // NOI18N
+        pnlCentral.add(lblInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 330, 70));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yt.png"))); // NOI18N
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, 80));
+        lblYoutube.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yt.png"))); // NOI18N
+        pnlCentral.add(lblYoutube, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, 80));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiktok.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 330, 80));
+        lblTikTok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiktok.png"))); // NOI18N
+        pnlCentral.add(lblTikTok, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 330, 80));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 610));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,15 +176,15 @@ public class ContactanosUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblFacebook;
+    private javax.swing.JLabel lblInstagram;
+    private javax.swing.JLabel lblRegreso;
+    private javax.swing.JLabel lblTikTok;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblWhatsApp;
+    private javax.swing.JLabel lblYoutube;
+    private javax.swing.JPanel pnlCentral;
+    private javax.swing.JPanel pnlColor;
     // End of variables declaration//GEN-END:variables
 }

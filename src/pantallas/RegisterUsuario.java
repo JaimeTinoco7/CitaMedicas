@@ -30,147 +30,147 @@ public class RegisterUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlCentral = new javax.swing.JPanel();
         txtNombre = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblNombreF = new javax.swing.JLabel();
+        lblImagen = new javax.swing.JLabel();
+        lblMediPlus = new javax.swing.JLabel();
+        lblAutomanager = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         txtApellido = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblApellidoF = new javax.swing.JLabel();
+        lblApellido = new javax.swing.JLabel();
+        lblGenero = new javax.swing.JLabel();
         txtGenero = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
+        lblGeneroF = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        lblCorreoF = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblCorreo = new javax.swing.JLabel();
+        lblPasswordF = new javax.swing.JLabel();
+        lblContraseña = new javax.swing.JLabel();
+        lblPregunta = new javax.swing.JLabel();
         txtPregunta = new javax.swing.JComboBox<>();
-        jLabel15 = new javax.swing.JLabel();
+        lblPreguntaF = new javax.swing.JLabel();
         txtRespuesta = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        lblRespuestaF = new javax.swing.JLabel();
+        lblRespuesta = new javax.swing.JLabel();
+        lblRegistrarse = new javax.swing.JLabel();
+        lblYaTengoCuenta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtNombre.setBackground(new java.awt.Color(217, 217, 217));
         txtNombre.setBorder(null);
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 210, 20));
+        pnlCentral.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 210, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 230, 40));
+        lblNombreF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblNombreF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 230, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo 4.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 210, 220));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo 4.png"))); // NOI18N
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 210, 220));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 250, 40));
+        lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
+        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 250, 40));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 320, 30));
+        lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
+        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 320, 30));
 
-        jLabel5.setText("Nombre:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        lblNombre.setText("Nombre:");
+        pnlCentral.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
         txtApellido.setBackground(new java.awt.Color(217, 217, 217));
         txtApellido.setBorder(null);
-        jPanel1.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 210, 20));
+        pnlCentral.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 210, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 230, 40));
+        lblApellidoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblApellidoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 230, 40));
 
-        jLabel7.setText("Apellidos:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+        lblApellido.setText("Apellidos:");
+        pnlCentral.add(lblApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
-        jLabel8.setText("Genero:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
+        lblGenero.setText("Genero:");
+        pnlCentral.add(lblGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         txtGenero.setBackground(new java.awt.Color(217, 217, 217));
         txtGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Prefiero no decirlo", " " }));
         txtGenero.setBorder(null);
         txtGenero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 210, -1));
+        pnlCentral.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 210, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 230, 40));
+        lblGeneroF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblGeneroF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 230, 40));
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 210, 20));
+        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 210, 20));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 230, 40));
+        lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 230, 40));
 
         txtPassword.setBackground(new java.awt.Color(217, 217, 217));
         txtPassword.setBorder(null);
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 200, 20));
+        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 200, 20));
 
-        jLabel11.setText("Correo");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        lblCorreo.setText("Correo");
+        pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 230, 40));
+        lblPasswordF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 230, 40));
 
-        jLabel13.setText("Contraseña:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
+        lblContraseña.setText("Contraseña:");
+        pnlCentral.add(lblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
 
-        jLabel14.setText("Pregunta de Seguridad:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+        lblPregunta.setText("Pregunta de Seguridad:");
+        pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
 
         txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
         txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál fue el nombre de tu primera mascota?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
         txtPregunta.setBorder(null);
         txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 210, -1));
+        pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 210, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 230, 40));
+        lblPreguntaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 230, 40));
 
         txtRespuesta.setBackground(new java.awt.Color(217, 217, 217));
         txtRespuesta.setBorder(null);
-        jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 210, 20));
+        pnlCentral.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 210, 20));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 570, 230, 40));
+        lblRespuestaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        pnlCentral.add(lblRespuestaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 570, 230, 40));
 
-        jLabel17.setText("Respuesta:");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, -1, -1));
+        lblRespuesta.setText("Respuesta:");
+        pnlCentral.add(lblRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnRegister.png"))); // NOI18N
-        jLabel18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel18.setFocusable(false);
-        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnRegister.png"))); // NOI18N
+        lblRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblRegistrarse.setFocusable(false);
+        lblRegistrarse.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel18MouseClicked(evt);
+                lblRegistrarseMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 630, -1, 40));
+        pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 630, -1, 40));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ya tengo cuenta. Iniciar Sesión.png"))); // NOI18N
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblYaTengoCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ya tengo cuenta. Iniciar Sesión.png"))); // NOI18N
+        lblYaTengoCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
+                lblYaTengoCuentaMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 680, 220, 20));
+        pnlCentral.add(lblYaTengoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 680, 220, 20));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+    private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
           String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
         String genero = (String) txtGenero.getSelectedItem();
@@ -199,15 +199,15 @@ public class RegisterUsuario extends javax.swing.JFrame {
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel18MouseClicked
+    }//GEN-LAST:event_lblRegistrarseMouseClicked
 
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+    private void lblYaTengoCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYaTengoCuentaMouseClicked
        
 //        LoginUsuario pantalla = new LoginUsuario();
 //        pantalla.setLocationRelativeTo(this);
 //        pantalla.setVisible(true);
 //        this.setVisible(false);
-    }//GEN-LAST:event_jLabel19MouseClicked
+    }//GEN-LAST:event_lblYaTengoCuentaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -248,26 +248,26 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblApellido;
+    private javax.swing.JLabel lblApellidoF;
+    private javax.swing.JLabel lblAutomanager;
+    private javax.swing.JLabel lblContraseña;
+    private javax.swing.JLabel lblCorreo;
+    private javax.swing.JLabel lblCorreoF;
+    private javax.swing.JLabel lblGenero;
+    private javax.swing.JLabel lblGeneroF;
+    private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblMediPlus;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreF;
+    private javax.swing.JLabel lblPasswordF;
+    private javax.swing.JLabel lblPregunta;
+    private javax.swing.JLabel lblPreguntaF;
+    private javax.swing.JLabel lblRegistrarse;
+    private javax.swing.JLabel lblRespuesta;
+    private javax.swing.JLabel lblRespuestaF;
+    private javax.swing.JLabel lblYaTengoCuenta;
+    private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JComboBox<String> txtGenero;

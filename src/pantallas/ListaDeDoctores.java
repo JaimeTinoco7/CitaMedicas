@@ -26,75 +26,75 @@ public class ListaDeDoctores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
+        pnlCentral = new javax.swing.JPanel();
+        pnlColor = new javax.swing.JPanel();
+        lblRegreso = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblDoctores = new javax.swing.JLabel();
+        lblPerfil1 = new javax.swing.JLabel();
+        lblSacarCita1 = new javax.swing.JLabel();
+        lblVerPerfil1 = new javax.swing.JLabel();
+        txtDoctor1 = new javax.swing.JTextField();
+        lblPerfil2 = new javax.swing.JLabel();
+        lblSacarCita2 = new javax.swing.JLabel();
+        lblVerPerfil2 = new javax.swing.JLabel();
+        txtDoctor2 = new javax.swing.JTextField();
+        cbxDoctores = new javax.swing.JComboBox<>();
+        lblSiguiente = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(13, 143, 131));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlColor.setBackground(new java.awt.Color(13, 143, 131));
+        pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
+        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        jLabel5.setText("Doctores:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        lblDoctores.setText("Doctores:");
+        pnlCentral.add(lblDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dra.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
+        lblPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dra.png"))); // NOI18N
+        pnlCentral.add(lblPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 60));
+        lblSacarCita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        pnlCentral.add(lblSacarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 60));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, 60));
+        lblVerPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        pnlCentral.add(lblVerPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, 60));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField2.setFocusable(false);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 370, 200));
+        txtDoctor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtDoctor1.setFocusable(false);
+        pnlCentral.add(txtDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 370, 200));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrJuan.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
+        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrJuan.png"))); // NOI18N
+        pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 110, 60));
+        lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        pnlCentral.add(lblSacarCita2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 110, 60));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 120, 60));
+        lblVerPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        pnlCentral.add(lblVerPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 120, 60));
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField3.setFocusable(false);
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 200));
+        txtDoctor2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtDoctor2.setFocusable(false);
+        pnlCentral.add(txtDoctor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 200));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
+        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
+        lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
+        pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,20 +198,20 @@ public class ListaDeDoctores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JComboBox<String> cbxDoctores;
+    private javax.swing.JLabel lblDoctores;
+    private javax.swing.JLabel lblPerfil1;
+    private javax.swing.JLabel lblPerfil2;
+    private javax.swing.JLabel lblRegreso;
+    private javax.swing.JLabel lblSacarCita1;
+    private javax.swing.JLabel lblSacarCita2;
+    private javax.swing.JLabel lblSiguiente;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblVerPerfil1;
+    private javax.swing.JLabel lblVerPerfil2;
+    private javax.swing.JPanel pnlCentral;
+    private javax.swing.JPanel pnlColor;
+    private javax.swing.JTextField txtDoctor1;
+    private javax.swing.JTextField txtDoctor2;
     // End of variables declaration//GEN-END:variables
 }
