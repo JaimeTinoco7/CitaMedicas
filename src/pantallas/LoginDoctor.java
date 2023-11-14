@@ -4,6 +4,8 @@
  */
 package pantallas;
 
+import entidades.Medico;
+import entidades.MedicoDatos;
 import entidades.Usuario;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -95,6 +97,33 @@ public class LoginDoctor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
+// Captura el correo y la contraseña ingresados por el usuario
+    String correo = txtCorreo.getText();
+    String contraseña = new String(txtPassword.getPassword());
+
+    // Llama a la instancia de DoctorManager para autenticar al doctor
+    MedicoDatos medicoDatos = new MedicoDatos();
+    Medico medico = medicoDatos.autenticarMedico(correo, contraseña);
+
+    // Comprobamos si el doctor es nulo o no
+    if (medico != null) {
+        // Verifica el correo para determinar qué ventana abrir
+        if ("user1".equals(correo)) {
+            //VistaDoctor perfilDoctor = new VistaDoctor();
+            //perfilDoctor.setVisible(true);
+            //this.dispose(); // Cierra la ventana de inicio de sesión actual
+        } else if ("user2".equals(correo)) {
+           // VistaDoctor2 perfilDoctor2 = new VistaDoctor2();
+           // perfilDoctor2.setVisible(true);
+           // this.dispose(); // Cierra la ventana de inicio de sesión actual
+        } else {
+            // Maneja otros casos aquí si es necesario
+            JOptionPane.showMessageDialog(this, "Usuario no reconocido", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+        }
+    } else {
+        // Autenticación fallida, muestra un mensaje de error
+        JOptionPane.showMessageDialog(this, "Correo o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+    }
 
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
