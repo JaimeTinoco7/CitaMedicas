@@ -98,7 +98,8 @@ public class ListaDeDoctores5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+// prueba
+    
     /**
      * @param args the command line arguments
      */
