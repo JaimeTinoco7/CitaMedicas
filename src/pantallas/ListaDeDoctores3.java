@@ -75,7 +75,7 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         txtDoctor1.setFocusable(false);
         pnlCentral.add(txtDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 370, 200));
 
-        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrJuan.png"))); // NOI18N
+        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dra Angelica.png"))); // NOI18N
         pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
 
         lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
