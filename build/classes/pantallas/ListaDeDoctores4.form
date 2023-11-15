@@ -96,7 +96,7 @@
         <Component class="javax.swing.JLabel" name="lblPerfil1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Dra.png"/>
+              <Image iconType="3" name="/images/DrEdgar.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -147,7 +147,7 @@
         <Component class="javax.swing.JLabel" name="lblPerfil2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/DrJuan.png"/>
+              <Image iconType="3" name="/images/PsFrancisco.png"/>
             </Property>
           </Properties>
           <Constraints>

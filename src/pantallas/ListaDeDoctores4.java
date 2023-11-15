@@ -62,7 +62,7 @@ public class ListaDeDoctores4 extends javax.swing.JFrame {
         lblDoctores.setText("Doctores:");
         pnlCentral.add(lblDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
-        lblPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dra.png"))); // NOI18N
+        lblPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrEdgar.png"))); // NOI18N
         pnlCentral.add(lblPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
 
         lblSacarCita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
@@ -75,7 +75,7 @@ public class ListaDeDoctores4 extends javax.swing.JFrame {
         txtDoctor1.setFocusable(false);
         pnlCentral.add(txtDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 370, 200));
 
-        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrJuan.png"))); // NOI18N
+        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PsFrancisco.png"))); // NOI18N
         pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
 
         lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
