@@ -11,6 +11,9 @@ import java.util.List;
  * @author jaime
  */
 public class Clinica {
+    
+    //atributos
+    
     private String nombre;
     private String direccion;
     private List<Medico> medicos;
