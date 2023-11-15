@@ -10,11 +10,11 @@ import entidades.Usuario;
  *
  * @author jaime
  */
-public class MenuUsuario extends javax.swing.JFrame {
+public class MenuDoctor extends javax.swing.JFrame {
 
     private Usuario usuarioAutenticado;
     
-    public MenuUsuario() {
+    public MenuDoctor() {
         initComponents();
     }
     

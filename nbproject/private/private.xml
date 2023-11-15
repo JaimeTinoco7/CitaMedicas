@@ -5,12 +5,14 @@
         <group>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/LoginUsuario.java</file>
+            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/entidades/Clinica.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/MenuUsuario.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/InicioPantalla.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/SobreNosotros.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/AgendarCita.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/entidades/Cita.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/RegisterUsuario.java</file>
+            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/MenuDoctor.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ContactanosUsuario.java</file>
         </group>
     </open-files>
