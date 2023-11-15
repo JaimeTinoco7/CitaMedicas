@@ -54,6 +54,11 @@ public class InicioPantalla extends javax.swing.JFrame {
 
         lblDoctor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnDoctorr.png"))); // NOI18N
         lblDoctor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblDoctor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblDoctorMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 160, 50));
 
         lblPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPacient.png"))); // NOI18N
@@ -76,6 +81,13 @@ public class InicioPantalla extends javax.swing.JFrame {
         pantalla.setLocationRelativeTo(this);
         this.setVisible(false);
     }//GEN-LAST:event_lblPacienteMouseClicked
+
+    private void lblDoctorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblDoctorMouseClicked
+        LoginDoctor pantalla = new  LoginDoctor();
+        pantalla.setVisible(true);
+        pantalla.setLocationRelativeTo(this);
+        this.setVisible(false);  
+    }//GEN-LAST:event_lblDoctorMouseClicked
 
     /**
      * @param args the command line arguments
