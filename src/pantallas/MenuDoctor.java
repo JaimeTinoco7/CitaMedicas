@@ -10,11 +10,11 @@ import entidades.Usuario;
  *
  * @author jaime
  */
-public class MenuUsuario extends javax.swing.JFrame {
+public class MenuDoctor extends javax.swing.JFrame {
 
     private Usuario usuarioAutenticado;
     
-    public MenuUsuario() {
+    public MenuDoctor() {
         initComponents();
     }
     
@@ -70,34 +70,52 @@ public class MenuUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlCentral.setBackground(new java.awt.Color(255, 255, 255));
+        pnlCentral.setBackground(new java.awt.Color(13, 143, 131));
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblInfoLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerResultados.png"))); // NOI18N
-        pnlCentral.add(lblInfoLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 100, 90));
+        lblInfoLab.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblInfoLabMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(lblInfoLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 100, 90));
 
         lblListaCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ListaDeCitas.png"))); // NOI18N
-        pnlCentral.add(lblListaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
+        pnlCentral.add(lblListaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 100, 90));
 
-        lblAgendarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
-        pnlCentral.add(lblAgendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
+        lblAgendarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RevisarCita.png"))); // NOI18N
+        lblAgendarCita.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblAgendarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAgendarCitaMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(lblAgendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 100, 90));
 
         lblBuscarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
-        pnlCentral.add(lblBuscarDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 100, 90));
+        pnlCentral.add(lblBuscarDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 100, 90));
 
         lblSobreNosotros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
-        pnlCentral.add(lblSobreNosotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 100, 90));
+        lblSobreNosotros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblSobreNosotros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSobreNosotrosMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(lblSobreNosotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 100, 90));
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImagenPacienteDoctor.png"))); // NOI18N
         pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 360, 180));
 
         lblContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos.png"))); // NOI18N
+        lblContactos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblContactos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblContactosMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblContactos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 100, 90));
+        pnlCentral.add(lblContactos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 100, 90));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 760));
 
@@ -175,12 +193,32 @@ public class MenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblContactosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblContactosMouseClicked
-        
         ContactanosUsuario pantalla = new ContactanosUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblContactosMouseClicked
+
+    private void lblAgendarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAgendarCitaMouseClicked
+        RevisarCita pantalla = new RevisarCita();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAgendarCitaMouseClicked
+
+    private void lblSobreNosotrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSobreNosotrosMouseClicked
+        SobreNosotros pantalla = new SobreNosotros();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblSobreNosotrosMouseClicked
+
+    private void lblInfoLabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInfoLabMouseClicked
+        EnviarInformeLab pantalla = new EnviarInformeLab();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblInfoLabMouseClicked
 
     /**
      * @param args the command line arguments
