@@ -43,6 +43,7 @@ public class LoginUsuario extends javax.swing.JFrame {
         lblPasswordF = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         lblIniciarSesion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -61,20 +62,20 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
-        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, 20));
+        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, -1));
 
         lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, 40));
+        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, -1));
 
         txtPassword.setBackground(new java.awt.Color(217, 217, 217));
         txtPassword.setBorder(null);
-        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 20));
+        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, -1));
 
         lblCorreo.setText("Correo");
         pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
         lblPasswordF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, 40));
+        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, -1));
 
         lblPassword.setText("Contraseña:");
         pnlCentral.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
@@ -87,7 +88,10 @@ public class LoginUsuario extends javax.swing.JFrame {
                 lblIniciarSesionMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, -1, 40));
+        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 580, -1, 40));
+
+        jLabel1.setText("¿Olvidaste tu contraseña?");
+        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
@@ -187,6 +191,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCorreoF;

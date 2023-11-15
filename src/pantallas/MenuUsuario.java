@@ -80,12 +80,27 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblListaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
 
         lblAgendarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
+        lblAgendarCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAgendarCitaMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblAgendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
 
         lblBuscarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
+        lblBuscarDoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblBuscarDocMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblBuscarDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 100, 90));
 
         lblSobreNosotros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
+        lblSobreNosotros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSobreNosotrosMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSobreNosotros, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 100, 90));
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImagenPacienteDoctor.png"))); // NOI18N
@@ -181,6 +196,27 @@ public class MenuUsuario extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblContactosMouseClicked
+
+    private void lblAgendarCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAgendarCitaMouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAgendarCitaMouseClicked
+
+    private void lblBuscarDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarDocMouseClicked
+        ListaDeDoctores pantalla = new ListaDeDoctores();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblBuscarDocMouseClicked
+
+    private void lblSobreNosotrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSobreNosotrosMouseClicked
+        SobreNosotros pantalla = new SobreNosotros();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblSobreNosotrosMouseClicked
 
     /**
      * @param args the command line arguments
