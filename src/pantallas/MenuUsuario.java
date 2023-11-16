@@ -190,7 +190,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblContactosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblContactosMouseClicked
-        
+        //Probando
         ContactanosUsuario pantalla = new ContactanosUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
@@ -205,7 +205,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_lblAgendarCitaMouseClicked
 
     private void lblBuscarDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarDocMouseClicked
-        ListaDeDoctores pantalla = new ListaDeDoctores();
+        ListaDeDoctores1 pantalla = new ListaDeDoctores1();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
