@@ -86,7 +86,8 @@ public class InicioPantalla extends javax.swing.JFrame {
         LoginDoctor pantalla = new  LoginDoctor();
         pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(this);
-        this.setVisible(false);  
+        this.setVisible(false);
+        //
     }//GEN-LAST:event_lblDoctorMouseClicked
 
     /**
