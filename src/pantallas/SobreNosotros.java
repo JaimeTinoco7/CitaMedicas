@@ -8,12 +8,12 @@ package pantallas;
  *
  * @author jaime
  */
-public class ListaDeDoctores1 extends javax.swing.JFrame {
+public class SobreNosotros extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioPantalla
      */
-    public ListaDeDoctores1() {
+    public SobreNosotros() {
         initComponents();
     }
 
