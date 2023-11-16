@@ -7,6 +7,7 @@ package pantallas;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -155,24 +156,29 @@ public final class AgendarCita extends javax.swing.JFrame {
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
         String nombrePaciente = txtNombre.getText();
-        String fecha = (String) cbxFecha.getSelectedItem();
-        String hora = (String) cbxHora.getSelectedItem();
+    String fecha = (String) cbxFecha.getSelectedItem();
+    String hora = (String) cbxHora.getSelectedItem();
+    String motivo = txtaSintomas.getText();
 
-        String motivo = txtaSintomas.getText();
+    String archivoCitas = "citas.txt"; // Ruta completa al archivo de citas
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("citas.txt", true))) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-            SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
-            String formattedFecha = dateFormat.format(new Date()); 
-            String formattedHora = timeFormat.format(new Date()); 
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCitas, true))) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
 
-            writer.write(nombrePaciente + "," + formattedFecha + "," + formattedHora + "," + motivo);
-            writer.newLine();
-            JOptionPane.showMessageDialog(null, "Cita guardada con éxito");
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error al guardar la cita");
-        }
+        Date date = dateFormat.parse(fecha);
+        Date time = timeFormat.parse(hora);
+
+        String formattedFecha = dateFormat.format(date); 
+        String formattedHora = timeFormat.format(time); 
+
+        writer.write(nombrePaciente + "," + formattedFecha + "," + formattedHora + "," + motivo);
+        writer.newLine();
+        JOptionPane.showMessageDialog(null, "Cita guardada con éxito");
+    } catch (IOException | ParseException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al guardar la cita");
+    }
     }//GEN-LAST:event_lblGuardarMouseClicked
 
     /**
