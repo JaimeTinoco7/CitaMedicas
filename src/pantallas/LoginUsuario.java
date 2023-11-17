@@ -43,8 +43,8 @@ public class LoginUsuario extends javax.swing.JFrame {
         lblPasswordF = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         lblIniciarSesion = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblOlvidasteContraseña = new javax.swing.JLabel();
+        lblRegistrarse = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,23 +91,23 @@ public class LoginUsuario extends javax.swing.JFrame {
         });
         pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, 40));
 
-        jLabel1.setText("¿Olvidaste tu contraseña?");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblOlvidasteContraseña.setText("¿Olvidaste tu contraseña?");
+        lblOlvidasteContraseña.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblOlvidasteContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                lblOlvidasteContraseñaMouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
+        pnlCentral.add(lblOlvidasteContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
+        lblRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblRegistrarse.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                lblRegistrarseMouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
+        pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 
@@ -174,20 +174,20 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
         RegisterUsuario pantalla = new RegisterUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
         
-    }//GEN-LAST:event_jLabel2MouseClicked
+    }//GEN-LAST:event_lblRegistrarseMouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void lblOlvidasteContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidasteContraseñaMouseClicked
         RecuperarContra pantalla = new RecuperarContra();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblOlvidasteContraseñaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,16 +232,16 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCorreoF;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblIniciarSesion;
     private javax.swing.JLabel lblMediPlus;
+    private javax.swing.JLabel lblOlvidasteContraseña;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblPasswordF;
+    private javax.swing.JLabel lblRegistrarse;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JPasswordField txtPassword;

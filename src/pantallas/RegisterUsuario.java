@@ -182,9 +182,9 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
-        String nombre = txtNombre.getText();
+        String nombre = txtNombre.getText();//Obtiene el nombre
         String apellido = txtApellido.getText();
-        String genero = (String) txtGenero.getSelectedItem();
+        String genero = (String) txtGenero.getSelectedItem();//Obtiene el item seleccionado
         String correo = txtCorreo.getText();
         String contraseña = txtPassword.getText();
         String preguntaSeguridad = (String) txtPregunta.getSelectedItem();
@@ -216,7 +216,8 @@ public class RegisterUsuario extends javax.swing.JFrame {
                     this.setVisible(false);
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(this,
-                            "Error al crear la cuenta. Inténtalo de nuevo.",
+                            "Error al crear la cuenta."
+                                    + " Inténtalo de nuevo.",
                             "Error", JOptionPane.ERROR_MESSAGE);
                     ex.printStackTrace();
                 }
