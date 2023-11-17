@@ -116,11 +116,11 @@ public class LoginUsuario extends javax.swing.JFrame {
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
         String correo = txtCorreo.getText();
-String contraseña = txtPassword.getText();
+        String contraseña = txtPassword.getText();
 
-if (!correo.isEmpty() && !contraseña.isEmpty()) {
-    boolean usuarioEncontrado = false;
-    Usuario usuarioAutenticado = null;
+    if (!correo.isEmpty() && !contraseña.isEmpty()) {
+        boolean usuarioEncontrado = false;
+        Usuario usuarioAutenticado = null;
     
     try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
         while (scanner.hasNextLine()) {
@@ -145,7 +145,7 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
     if (usuarioEncontrado && usuarioAutenticado != null) {
         // Aquí abres la ventana del menú principal
         MenuUsuario pantallaMenu = new MenuUsuario();
-        pantallaMenu.setUsuarioAutenticado(usuarioAutenticado); // Si tienes un método para establecer el usuario autenticado
+        pantallaMenu.setUsuarioAutenticado(usuarioAutenticado);
         pantallaMenu.setLocationRelativeTo(this);
         pantallaMenu.setVisible(true);
         this.setVisible(false);
