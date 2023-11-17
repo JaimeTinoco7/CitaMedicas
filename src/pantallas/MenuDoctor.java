@@ -73,7 +73,7 @@ public class MenuDoctor extends javax.swing.JFrame {
         pnlCentral.setBackground(new java.awt.Color(13, 143, 131));
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblInfoLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerResultados.png"))); // NOI18N
+        lblInfoLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/EnviarInforme.png"))); // NOI18N
         lblInfoLab.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblInfoLabMouseClicked(evt);
@@ -82,6 +82,11 @@ public class MenuDoctor extends javax.swing.JFrame {
         pnlCentral.add(lblInfoLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 100, 90));
 
         lblListaCitas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ListaDeCitas.png"))); // NOI18N
+        lblListaCitas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblListaCitasMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblListaCitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 100, 90));
 
         lblAgendarCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RevisarCita.png"))); // NOI18N
@@ -93,7 +98,12 @@ public class MenuDoctor extends javax.swing.JFrame {
         });
         pnlCentral.add(lblAgendarCita, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 100, 90));
 
-        lblBuscarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
+        lblBuscarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarPacientes.png"))); // NOI18N
+        lblBuscarDoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblBuscarDocMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblBuscarDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 100, 90));
 
         lblSobreNosotros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
@@ -219,6 +229,20 @@ public class MenuDoctor extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblInfoLabMouseClicked
+
+    private void lblBuscarDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarDocMouseClicked
+        BuscarPaciente pantalla = new BuscarPaciente();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblBuscarDocMouseClicked
+
+    private void lblListaCitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblListaCitasMouseClicked
+        ListaPacientes pantalla = new ListaPacientes();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblListaCitasMouseClicked
 
     /**
      * @param args the command line arguments

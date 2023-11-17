@@ -28,7 +28,6 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
 
         pnlCentral = new javax.swing.JPanel();
         pnlColor = new javax.swing.JPanel();
-        lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         lblDoctores = new javax.swing.JLabel();
         lblPerfil1 = new javax.swing.JLabel();
@@ -40,7 +39,8 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         lblVerPerfil2 = new javax.swing.JLabel();
         txtDoctor2 = new javax.swing.JTextField();
         cbxDoctores = new javax.swing.JComboBox<>();
-        lblSiguiente = new javax.swing.JLabel();
+        btnSiguiente = new javax.swing.JLabel();
+        btnAtras = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,9 +50,6 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
 
         pnlColor.setBackground(new java.awt.Color(13, 143, 131));
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
-        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
         pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
@@ -91,13 +88,40 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
-        lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
-        pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
+        btnSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
+        btnSiguiente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSiguienteMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
+
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
+        btnAtras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAtrasMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(btnAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtrasMouseClicked
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnAtrasMouseClicked
+
+    private void btnSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiguienteMouseClicked
+        ListaDeDoctores4 pantalla = new ListaDeDoctores4();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnSiguienteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -390,14 +414,14 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel btnAtras;
+    private javax.swing.JLabel btnSiguiente;
     private javax.swing.JComboBox<String> cbxDoctores;
     private javax.swing.JLabel lblDoctores;
     private javax.swing.JLabel lblPerfil1;
     private javax.swing.JLabel lblPerfil2;
-    private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblSacarCita1;
     private javax.swing.JLabel lblSacarCita2;
-    private javax.swing.JLabel lblSiguiente;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblVerPerfil1;
     private javax.swing.JLabel lblVerPerfil2;

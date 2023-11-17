@@ -52,6 +52,11 @@ public class ListaDeDoctores1 extends javax.swing.JFrame {
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
         pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
@@ -92,12 +97,31 @@ public class ListaDeDoctores1 extends javax.swing.JFrame {
         pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
         lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
+        lblSiguiente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSiguienteMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblRegresoMouseClicked
+
+    private void lblSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguienteMouseClicked
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblSiguienteMouseClicked
 
     /**
      * @param args the command line arguments

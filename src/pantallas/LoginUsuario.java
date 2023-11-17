@@ -43,6 +43,8 @@ public class LoginUsuario extends javax.swing.JFrame {
         lblPasswordF = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         lblIniciarSesion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -61,20 +63,20 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
-        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, 20));
+        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, -1));
 
         lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, 40));
+        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 230, -1));
 
         txtPassword.setBackground(new java.awt.Color(217, 217, 217));
         txtPassword.setBorder(null);
-        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 20));
+        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, -1));
 
         lblCorreo.setText("Correo");
         pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
         lblPasswordF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, 40));
+        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 480, 230, -1));
 
         lblPassword.setText("Contraseña:");
         pnlCentral.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, -1, -1));
@@ -87,7 +89,25 @@ public class LoginUsuario extends javax.swing.JFrame {
                 lblIniciarSesionMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, -1, 40));
+        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, 40));
+
+        jLabel1.setText("¿Olvidaste tu contraseña?");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
@@ -95,18 +115,21 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-                                   
+        String correo = txtCorreo.getText();
+String contraseña = txtPassword.getText();
+
+if (!correo.isEmpty() && !contraseña.isEmpty()) {
     boolean usuarioEncontrado = false;
     Usuario usuarioAutenticado = null;
-
+    
     try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] userData = line.split(",");
-
-            if (userData.length >= 5 && txtCorreo.getText().equals(userData[3])
-                    && txtPassword.getText().equals(userData[4])) {
-                usuarioAutenticado = new Usuario(userData[0], 
+            
+            if (userData.length >= 5 && correo.equals(userData[3])
+                    && contraseña.equals(userData[4])) {
+                usuarioAutenticado = new Usuario(userData[0],
                         userData[1], userData[2], userData[3]);
                 usuarioEncontrado = true;
                 break;
@@ -114,35 +137,57 @@ public class LoginUsuario extends javax.swing.JFrame {
         }
     } catch (FileNotFoundException ex) {
         ex.printStackTrace();
-        JOptionPane.showMessageDialog(this, 
-                "Error al abrir el archivo de usuarios.", "Error", 
+        JOptionPane.showMessageDialog(this,
+                "Error al abrir el archivo de usuarios.", "Error",
                 JOptionPane.ERROR_MESSAGE);
     }
-
+    
     if (usuarioEncontrado && usuarioAutenticado != null) {
-        JOptionPane.showMessageDialog(this, "¡Bienvenido!",
-                "Inicio de sesión exitoso",
-                JOptionPane.INFORMATION_MESSAGE);
-
-        MenuUsuario pantalla = new MenuUsuario();
-        pantalla.setUsuarioAutenticado(usuarioAutenticado);
-        pantalla.setVisible(true);
-        this.dispose();
+        // Aquí abres la ventana del menú principal
+        MenuUsuario pantallaMenu = new MenuUsuario();
+        pantallaMenu.setUsuarioAutenticado(usuarioAutenticado); // Si tienes un método para establecer el usuario autenticado
+        pantallaMenu.setLocationRelativeTo(this);
+        pantallaMenu.setVisible(true);
+        this.setVisible(false);
     } else {
-        int respuesta = JOptionPane.showConfirmDialog(this, 
-                "Usuario o contraseña incorrectos. ¿Desea crear una cuenta?", 
-                "Error de inicio de sesión", 
-                JOptionPane.YES_NO_OPTION, 
+        JOptionPane.showMessageDialog(this,
+                "Usuario o contraseña incorrectos.", "Error",
+                JOptionPane.ERROR_MESSAGE);
+        int respuesta = JOptionPane.showConfirmDialog(this,
+                "¿Desea crear una cuenta?",
+                "Error de inicio de sesión",
+                JOptionPane.YES_NO_OPTION,
                 JOptionPane.ERROR_MESSAGE);
         if (respuesta == JOptionPane.YES_OPTION) {
-            RegisterUsuario pantalla = new RegisterUsuario();
-            pantalla.setVisible(true);
+            RegisterUsuario pantallaRegistro = new RegisterUsuario();
+            pantallaRegistro.setVisible(true);
             this.dispose();
         }
     }
+} else {
+    // Mostrar mensaje si faltan campos
+    JOptionPane.showMessageDialog(this,
+            "Completa los campos de correo y contraseña.", "Error",
+            JOptionPane.ERROR_MESSAGE);
+}
 
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        RegisterUsuario pantalla = new RegisterUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        RecuperarContra pantalla = new RecuperarContra();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,6 +232,8 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCorreoF;

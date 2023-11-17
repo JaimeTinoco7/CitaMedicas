@@ -47,6 +47,11 @@ public class ContactanosUsuario extends javax.swing.JFrame {
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
         pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (1).png"))); // NOI18N
@@ -55,27 +60,124 @@ public class ContactanosUsuario extends javax.swing.JFrame {
         pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
         lblCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
+        lblCorreo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCorreoMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 500, 330, 80));
 
         lblFacebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fb.png"))); // NOI18N
+        lblFacebook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblFacebook.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblFacebookMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 330, 70));
 
         lblWhatsApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wsp.png"))); // NOI18N
+        lblWhatsApp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblWhatsApp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblWhatsAppMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblWhatsApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 330, 70));
 
         lblInstagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ig.png"))); // NOI18N
+        lblInstagram.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblInstagram.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblInstagramMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 330, 70));
 
         lblYoutube.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yt.png"))); // NOI18N
+        lblYoutube.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblYoutube.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblYoutubeMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblYoutube, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, 80));
 
         lblTikTok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiktok.png"))); // NOI18N
+        lblTikTok.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblTikTok.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTikTokMouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblTikTok, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 330, 80));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblRegresoMouseClicked
+
+    private void lblFacebookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFacebookMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://www.facebook.com/people/MediPlus/61553778142795/?sk=followers&locale=es_LA"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblFacebookMouseClicked
+
+    private void lblTikTokMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTikTokMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://www.tiktok.com/@medi_plus18"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblTikTokMouseClicked
+
+    private void lblYoutubeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYoutubeMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://www.youtube.com/channel/UCmZ2akKrpi-uMDAv2xLMABw"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblYoutubeMouseClicked
+
+    private void lblWhatsAppMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblWhatsAppMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://chat.whatsapp.com/KEv303KvG1o1GFPiAubTmk"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblWhatsAppMouseClicked
+
+    private void lblInstagramMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInstagramMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://www.instagram.com/mediplus184/"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblInstagramMouseClicked
+
+    private void lblCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCorreoMouseClicked
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI
+        ("https://www.instagram.com/mediplus184/"));
+        } catch (java.io.IOException | java.net.URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_lblCorreoMouseClicked
 
     /**
      * @param args the command line arguments

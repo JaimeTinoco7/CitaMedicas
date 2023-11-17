@@ -7,6 +7,7 @@ package pantallas;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -57,6 +58,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
         lblRespuesta = new javax.swing.JLabel();
         lblRegistrarse = new javax.swing.JLabel();
         lblYaTengoCuenta = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,86 +68,86 @@ public class RegisterUsuario extends javax.swing.JFrame {
 
         txtNombre.setBackground(new java.awt.Color(217, 217, 217));
         txtNombre.setBorder(null);
-        pnlCentral.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 210, 20));
+        pnlCentral.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 210, 20));
 
         lblNombreF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblNombreF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 230, 40));
+        pnlCentral.add(lblNombreF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 230, 40));
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo 4.png"))); // NOI18N
-        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 210, 220));
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 150, 220));
 
         lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
-        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 250, 40));
+        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 250, 40));
 
         lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
-        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 320, 30));
+        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 320, 30));
 
         lblNombre.setText("Nombre:");
-        pnlCentral.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+        pnlCentral.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
         txtApellido.setBackground(new java.awt.Color(217, 217, 217));
         txtApellido.setBorder(null);
-        pnlCentral.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 210, 20));
+        pnlCentral.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 210, 20));
 
         lblApellidoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblApellidoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 230, 40));
+        pnlCentral.add(lblApellidoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 230, 40));
 
         lblApellido.setText("Apellidos:");
-        pnlCentral.add(lblApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
+        pnlCentral.add(lblApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         lblGenero.setText("Genero:");
-        pnlCentral.add(lblGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
+        pnlCentral.add(lblGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
         txtGenero.setBackground(new java.awt.Color(217, 217, 217));
         txtGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Prefiero no decirlo", " " }));
         txtGenero.setBorder(null);
         txtGenero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlCentral.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 210, -1));
+        pnlCentral.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 210, -1));
 
         lblGeneroF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblGeneroF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 230, 40));
+        pnlCentral.add(lblGeneroF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 230, 40));
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
-        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 210, 20));
+        pnlCentral.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 210, 20));
 
         lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 230, 40));
+        pnlCentral.add(lblCorreoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 230, 40));
 
         txtPassword.setBackground(new java.awt.Color(217, 217, 217));
         txtPassword.setBorder(null);
-        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 200, 20));
+        pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 200, 20));
 
         lblCorreo.setText("Correo");
-        pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, -1, -1));
 
         lblPasswordF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 230, 40));
+        pnlCentral.add(lblPasswordF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 230, 40));
 
         lblContraseña.setText("Contraseña:");
-        pnlCentral.add(lblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, -1));
+        pnlCentral.add(lblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, -1, -1));
 
         lblPregunta.setText("Pregunta de Seguridad:");
-        pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
+        pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
 
         txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál fue el nombre de tu primera mascota?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nik de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
         txtPregunta.setBorder(null);
         txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, 210, -1));
+        pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
 
         lblPreguntaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 230, 40));
+        pnlCentral.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 540, 230, 40));
 
         txtRespuesta.setBackground(new java.awt.Color(217, 217, 217));
         txtRespuesta.setBorder(null);
-        pnlCentral.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 580, 210, 20));
+        pnlCentral.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 210, 20));
 
         lblRespuestaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-        pnlCentral.add(lblRespuestaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 570, 230, 40));
+        pnlCentral.add(lblRespuestaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, 230, 40));
 
         lblRespuesta.setText("Respuesta:");
-        pnlCentral.add(lblRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, -1, -1));
+        pnlCentral.add(lblRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, -1, -1));
 
         lblRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnRegister.png"))); // NOI18N
         lblRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -155,15 +157,24 @@ public class RegisterUsuario extends javax.swing.JFrame {
                 lblRegistrarseMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 630, -1, 40));
+        pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 650, -1, 40));
 
         lblYaTengoCuenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ya tengo cuenta. Iniciar Sesión.png"))); // NOI18N
+        lblYaTengoCuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblYaTengoCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblYaTengoCuentaMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblYaTengoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 680, 220, 20));
+        pnlCentral.add(lblYaTengoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, 220, 20));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Direccion.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 30, 40));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
@@ -171,43 +182,81 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
-          String nombre = txtNombre.getText();
+        String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
         String genero = (String) txtGenero.getSelectedItem();
         String correo = txtCorreo.getText();
         String contraseña = txtPassword.getText();
-
         String preguntaSeguridad = (String) txtPregunta.getSelectedItem();
         String respuestaSeguridad = txtRespuesta.getText();
 
-        try {
-            FileWriter fileWriter
-                    = new FileWriter("usuarios.txt", true);
-            PrintWriter printWriter
-                    = new PrintWriter(fileWriter);
+        if (!nombre.isEmpty() && !apellido.isEmpty() && !correo.isEmpty()
+                && !contraseña.isEmpty() && !respuestaSeguridad.isEmpty()) {
+            // Validación de la contraseña
+            if (contraseña.length() >= 12 && contieneSimbolo(contraseña)) {
+                try {
+                    FileWriter fileWriter
+                            = new FileWriter("usuarios.txt", true);
+                    PrintWriter printWriter
+                            = new PrintWriter(fileWriter);
 
-            printWriter.println(nombre + "," + apellido + "," + genero + "," +
-                    correo + "," + contraseña + "," +
-                    preguntaSeguridad + ","+ respuestaSeguridad);
+                    printWriter.println(nombre + "," + apellido + "," + genero
+                            + "," + correo + "," + contraseña + ","
+                            + preguntaSeguridad + "," + respuestaSeguridad);
 
-            printWriter.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+                    printWriter.close();
+
+                    JOptionPane.showMessageDialog(this,
+                            "Cuenta creada exitosamente", "Éxito",
+                            JOptionPane.INFORMATION_MESSAGE);
+
+                    LoginUsuario pantalla = new LoginUsuario();
+                    pantalla.setLocationRelativeTo(this);
+                    pantalla.setVisible(true);
+                    this.setVisible(false);
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(this,
+                            "Error al crear la cuenta. Inténtalo de nuevo.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                }
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "La contraseña debe tener al menos 12"
+                        + " caracteres y al menos 1 símbolo.",
+                        "Error en la contraseña",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Completa todos los campos obligatorios",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }//GEN-LAST:event_lblRegistrarseMouseClicked
+
+    private void lblYaTengoCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYaTengoCuentaMouseClicked
 
         LoginUsuario pantalla = new LoginUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_lblRegistrarseMouseClicked
-
-    private void lblYaTengoCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYaTengoCuentaMouseClicked
-       
-//        LoginUsuario pantalla = new LoginUsuario();
-//        pantalla.setLocationRelativeTo(this);
-//        pantalla.setVisible(true);
-//        this.setVisible(false);
     }//GEN-LAST:event_lblYaTengoCuentaMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        InicioPantalla pantalla = new InicioPantalla();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private boolean contieneSimbolo(String contraseña) {
+        for (char c : contraseña.toCharArray()) {
+            if (!Character.isLetterOrDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     /**
      * @param args the command line arguments
@@ -248,6 +297,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblApellido;
     private javax.swing.JLabel lblApellidoF;
     private javax.swing.JLabel lblAutomanager;
