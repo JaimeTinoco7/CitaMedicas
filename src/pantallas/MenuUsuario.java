@@ -64,6 +64,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
@@ -125,6 +126,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         mbMenuPrincipal1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoMenu.png"))); // NOI18N
         mbMenuPrincipal1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         mbMenuPrincipal1.setPreferredSize(new java.awt.Dimension(65, 65));
+        mbMenuPrincipal1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mbMenuPrincipal1MouseClicked(evt);
+            }
+        });
         mbMenuPrincipal1.add(jSeparator6);
 
         jMenuUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Perfil.png"))); // NOI18N
@@ -149,22 +155,45 @@ public class MenuUsuario extends javax.swing.JFrame {
 
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerCita.png"))); // NOI18N
         jMenuItem3.setPreferredSize(new java.awt.Dimension(191, 50));
+        jMenuItem3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem3MouseClicked(evt);
+            }
+        });
         mbMenuPrincipal1.add(jMenuItem3);
         mbMenuPrincipal1.add(jSeparator3);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (2).png"))); // NOI18N
         jMenuItem4.setPreferredSize(new java.awt.Dimension(230, 50));
+        jMenuItem4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem4MouseClicked(evt);
+            }
+        });
         mbMenuPrincipal1.add(jMenuItem4);
         mbMenuPrincipal1.add(jSeparator5);
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros2.png"))); // NOI18N
         jMenuItem5.setPreferredSize(new java.awt.Dimension(202, 50));
+        jMenuItem5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem5MouseClicked(evt);
+            }
+        });
         mbMenuPrincipal1.add(jMenuItem5);
         mbMenuPrincipal1.add(jSeparator4);
 
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CerrarSession.png"))); // NOI18N
         jMenuItem6.setPreferredSize(new java.awt.Dimension(202, 50));
+        jMenuItem6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem6MouseClicked(evt);
+            }
+        });
         mbMenuPrincipal1.add(jMenuItem6);
+
+        jMenu3.setText("jMenu3");
+        mbMenuPrincipal1.add(jMenu3);
 
         mbMenuPrincipal.add(mbMenuPrincipal1);
 
@@ -217,6 +246,41 @@ public class MenuUsuario extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblSobreNosotrosMouseClicked
+
+    private void jMenuItem4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem4MouseClicked
+        ContactanosUsuario pantalla = new ContactanosUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem4MouseClicked
+
+    private void jMenuItem5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MouseClicked
+        SobreNosotros pantalla = new SobreNosotros();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem5MouseClicked
+
+    private void jMenuItem6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem6MouseClicked
+        LoginUsuario pantalla = new LoginUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem6MouseClicked
+
+    private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
+        ListaCitas pantalla = new ListaCitas();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3MouseClicked
+
+    private void mbMenuPrincipal1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mbMenuPrincipal1MouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_mbMenuPrincipal1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -271,6 +335,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
