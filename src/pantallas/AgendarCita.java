@@ -156,11 +156,11 @@ public final class AgendarCita extends javax.swing.JFrame {
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
         String nombrePaciente = txtNombre.getText();
-    String fecha = (String) cbxFecha.getSelectedItem();
-    String hora = (String) cbxHora.getSelectedItem();
-    String motivo = txtaSintomas.getText();
+        String fecha = (String) cbxFecha.getSelectedItem();
+        String hora = (String) cbxHora.getSelectedItem();
+        String motivo = txtaSintomas.getText();
 
-    String archivoCitas = "citas.txt"; // Ruta completa al archivo de citas
+        String archivoCitas = "citas.txt"; // Ruta completa al archivo de citas
 
     try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCitas, true))) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
