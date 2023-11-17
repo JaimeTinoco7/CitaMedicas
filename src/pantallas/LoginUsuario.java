@@ -109,7 +109,7 @@ public class LoginUsuario extends javax.swing.JFrame {
         });
         pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
 
-        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

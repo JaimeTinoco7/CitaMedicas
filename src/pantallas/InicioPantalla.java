@@ -41,16 +41,16 @@ public class InicioPantalla extends javax.swing.JFrame {
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus_logo1.png"))); // NOI18N
-        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 270, 270));
+        pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 270, 270));
 
         lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+.png"))); // NOI18N
-        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 330, 60));
+        pnlCentral.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 330, 60));
 
         lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R.png"))); // NOI18N
-        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 310, 30));
+        pnlCentral.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 310, 30));
 
         lblLema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/_Brindando Cuidado y Salud de Calidad_ Mediplus, su Clínica de Confianza_.png"))); // NOI18N
-        pnlCentral.add(lblLema, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 340, 90));
+        pnlCentral.add(lblLema, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 340, 90));
 
         lblDoctor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnDoctorr.png"))); // NOI18N
         lblDoctor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -68,7 +68,7 @@ public class InicioPantalla extends javax.swing.JFrame {
                 lblPacienteMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 150, 50));
+        pnlCentral.add(lblPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 150, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 

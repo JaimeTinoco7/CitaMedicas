@@ -131,7 +131,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
 
         txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nik de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
         txtPregunta.setBorder(null);
         txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
@@ -235,7 +235,6 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_lblRegistrarseMouseClicked
 
     private void lblYaTengoCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYaTengoCuentaMouseClicked
-
         LoginUsuario pantalla = new LoginUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
