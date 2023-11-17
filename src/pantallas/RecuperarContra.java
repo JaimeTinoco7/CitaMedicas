@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class RecuperarContra extends javax.swing.JFrame {
 
-        private static final String archivoUsuarios = "usuarios.txt";
+    private static final String archivoUsuarios = "usuarios.txt";
 
     public RecuperarContra() {
         initComponents();
@@ -35,17 +35,19 @@ public class RecuperarContra extends javax.swing.JFrame {
         lblImagen = new javax.swing.JLabel();
         lblMediPlus = new javax.swing.JLabel();
         txtRespuesta = new javax.swing.JTextField();
+        txtPregunta = new javax.swing.JComboBox<>();
         txtCorreo = new javax.swing.JTextField();
         lblPreguntaF = new javax.swing.JLabel();
         lblAutomanager = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
         lblPregunta = new javax.swing.JLabel();
-        txtPregunta = new javax.swing.JComboBox<>();
         lblRespuesta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblApellidoF = new javax.swing.JLabel();
         lblApellidoF1 = new javax.swing.JLabel();
+        txtPregunta1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -56,14 +58,20 @@ public class RecuperarContra extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo2.png"))); // NOI18N
-        jPanel1.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 46, 210, 220));
+        jPanel1.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 210, 220));
 
         lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
-        jPanel1.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 284, 250, 40));
+        jPanel1.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 250, 40));
 
         txtRespuesta.setBackground(new java.awt.Color(217, 217, 217));
         txtRespuesta.setBorder(null);
         jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 210, -1));
+
+        txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
+        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        txtPregunta.setBorder(null);
+        txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
@@ -73,7 +81,7 @@ public class RecuperarContra extends javax.swing.JFrame {
         jPanel1.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 230, 40));
 
         lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
-        jPanel1.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 330, 320, 30));
+        jPanel1.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 320, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("RECUPERAR CONTRASEÑA");
@@ -84,12 +92,6 @@ public class RecuperarContra extends javax.swing.JFrame {
 
         lblPregunta.setText("Pregunta de Seguridad:");
         jPanel1.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
-
-        txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nik de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
-        txtPregunta.setBorder(null);
-        txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
 
         lblRespuesta.setText("Respuesta:");
         jPanel1.add(lblRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
@@ -102,7 +104,7 @@ public class RecuperarContra extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 106, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 106, -1));
 
         lblApellidoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
         jPanel1.add(lblApellidoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 230, 40));
@@ -110,7 +112,21 @@ public class RecuperarContra extends javax.swing.JFrame {
         lblApellidoF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
         jPanel1.add(lblApellidoF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 230, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 459, 662));
+        txtPregunta1.setBackground(new java.awt.Color(217, 217, 217));
+        txtPregunta1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nik de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        txtPregunta1.setBorder(null);
+        txtPregunta1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(txtPregunta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DireccionDoc.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -130,6 +146,13 @@ public class RecuperarContra extends javax.swing.JFrame {
                     "Correo electrónico no encontrado o respuesta incorrecta.");
         }
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        LoginUsuario pantalla = new  LoginUsuario();
+        pantalla.setVisible(true);
+        pantalla.setLocationRelativeTo(this);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 private static String recuperarContra(String email, 
         String preguntaSeguridad, String respuestaSeguridad) {
         try (BufferedReader reader = 
@@ -193,6 +216,7 @@ private static String recuperarContra(String email,
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JLabel lblApellidoF;
@@ -206,6 +230,7 @@ private static String recuperarContra(String email,
     private javax.swing.JLabel lblRespuesta;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JComboBox<String> txtPregunta;
+    private javax.swing.JComboBox<String> txtPregunta1;
     private javax.swing.JTextField txtRespuesta;
     // End of variables declaration//GEN-END:variables
 }

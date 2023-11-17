@@ -64,7 +64,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
@@ -115,7 +114,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
         pnlCentral.add(lblContactos, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 100, 90));
 
-        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 760));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 510));
 
         mbMenuPrincipal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         mbMenuPrincipal.setFocusable(false);
@@ -191,9 +190,6 @@ public class MenuUsuario extends javax.swing.JFrame {
             }
         });
         mbMenuPrincipal1.add(jMenuItem6);
-
-        jMenu3.setText("jMenu3");
-        mbMenuPrincipal1.add(jMenu3);
 
         mbMenuPrincipal.add(mbMenuPrincipal1);
 
@@ -335,7 +331,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
