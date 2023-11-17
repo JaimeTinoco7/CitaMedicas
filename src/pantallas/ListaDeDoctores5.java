@@ -39,7 +39,7 @@ public class ListaDeDoctores5 extends javax.swing.JFrame {
         lblVerPerfil2 = new javax.swing.JLabel();
         txtDoctor2 = new javax.swing.JTextField();
         cbxDoctores = new javax.swing.JComboBox<>();
-        btnSiguiente = new javax.swing.JLabel();
+        lblAtras = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -87,25 +87,25 @@ public class ListaDeDoctores5 extends javax.swing.JFrame {
         cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
-        btnSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
-        btnSiguiente.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
+        lblAtras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnSiguienteMouseClicked(evt);
+                lblAtrasMouseClicked(evt);
             }
         });
-        pnlCentral.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
+        pnlCentral.add(lblAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiguienteMouseClicked
+    private void lblAtrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAtrasMouseClicked
         ListaDeDoctores4 pantalla = new ListaDeDoctores4();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_btnSiguienteMouseClicked
+    }//GEN-LAST:event_lblAtrasMouseClicked
 // prueba
     
     /**
@@ -399,8 +399,8 @@ public class ListaDeDoctores5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel btnSiguiente;
     private javax.swing.JComboBox<String> cbxDoctores;
+    private javax.swing.JLabel lblAtras;
     private javax.swing.JLabel lblDoctores;
     private javax.swing.JLabel lblPerfil1;
     private javax.swing.JLabel lblPerfil2;
