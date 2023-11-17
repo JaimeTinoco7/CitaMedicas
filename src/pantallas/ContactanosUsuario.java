@@ -57,7 +57,7 @@ public class ContactanosUsuario extends javax.swing.JFrame {
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (1).png"))); // NOI18N
         pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 180, 50));
 
-        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 65));
 
         lblCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
         lblCorreo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
