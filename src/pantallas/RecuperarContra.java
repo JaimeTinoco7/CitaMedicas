@@ -4,15 +4,18 @@
  */
 package pantallas;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Liz
  */
 public class RecuperarContra extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RecuperarContra
-     */
+        private static final String archivoUsuarios = "usuarios.txt";
+
     public RecuperarContra() {
         initComponents();
     }
@@ -27,172 +30,130 @@ public class RecuperarContra extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         lblImagen = new javax.swing.JLabel();
         lblMediPlus = new javax.swing.JLabel();
+        txtRespuesta = new javax.swing.JTextField();
+        txtCorreo = new javax.swing.JTextField();
+        lblPreguntaF = new javax.swing.JLabel();
         lblAutomanager = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        lblCorreoF = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
         lblPregunta = new javax.swing.JLabel();
         txtPregunta = new javax.swing.JComboBox<>();
-        lblPreguntaF = new javax.swing.JLabel();
-        txtRespuesta = new javax.swing.JTextField();
-        lblRespuestaF = new javax.swing.JLabel();
         lblRespuesta = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        lblApellidoF = new javax.swing.JLabel();
+        lblApellidoF1 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Medicina_logo2.png"))); // NOI18N
+        jPanel1.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 46, 210, 220));
 
         lblMediPlus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MediPlus+ (1).png"))); // NOI18N
+        jPanel1.add(lblMediPlus, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 284, 250, 40));
 
-        lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("RECUPERAR CONTRASEÑA");
+        txtRespuesta.setBackground(new java.awt.Color(217, 217, 217));
+        txtRespuesta.setBorder(null);
+        jPanel1.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 210, -1));
 
         txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
         txtCorreo.setBorder(null);
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 210, -1));
 
-        lblCorreoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        lblPreguntaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        jPanel1.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 230, 40));
+
+        lblAutomanager.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/A U T O M A N A G E R (1).png"))); // NOI18N
+        jPanel1.add(lblAutomanager, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 330, 320, 30));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("RECUPERAR CONTRASEÑA");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 195, -1));
 
         lblCorreo.setText("Correo");
+        jPanel1.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         lblPregunta.setText("Pregunta de Seguridad:");
+        jPanel1.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
 
         txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
         txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nik de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
         txtPregunta.setBorder(null);
         txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        lblPreguntaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
-
-        txtRespuesta.setBackground(new java.awt.Color(217, 217, 217));
-        txtRespuesta.setBorder(null);
-
-        lblRespuestaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        jPanel1.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
 
         lblRespuesta.setText("Respuesta:");
+        jPanel1.add(lblRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Recuperar.png"))); // NOI18N
         jLabel2.setText("jLabel2");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 106, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(lblMediPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(lblAutomanager, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(lblPregunta)
-                            .addGap(36, 36, 36)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(txtPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(lblPreguntaF, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(lblRespuesta)
-                            .addGap(94, 94, 94)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblRespuestaF, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addComponent(txtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblCorreo)
-                        .addGap(114, 114, 114)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCorreoF, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblMediPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(lblAutomanager, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCorreoF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCorreo)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPreguntaF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPregunta)
-                            .addComponent(txtPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRespuestaF, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblRespuesta)
-                            .addComponent(txtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        lblApellidoF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        jPanel1.add(lblApellidoF, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 230, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        lblApellidoF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
+        jPanel1.add(lblApellidoF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 230, 40));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 459, 662));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        String correo = txtCorreo.getText();
+        String selectedQuestion = (String) txtPregunta.getSelectedItem();
+        String respuesta = txtRespuesta.getText();
+
+        String recoveredPassword = recuperarContra(correo, 
+                selectedQuestion, respuesta);
+        if (recoveredPassword != null) {
+            JOptionPane.showMessageDialog(this, "Tu contraseña es: " 
+                    + recoveredPassword);
+        } else {
+            JOptionPane.showMessageDialog(this, 
+                    "Correo electrónico no encontrado o respuesta incorrecta.");
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+private static String recuperarContra(String email, 
+        String preguntaSeguridad, String respuestaSeguridad) {
+        try (BufferedReader reader = 
+                new BufferedReader(new FileReader("usuarios.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 7) {
+                    String storedEmail = parts[3];
+                    String storedPassword = parts[4];
+                    String storedPregunta = parts[5];
+                    String storedRespuesta = parts[6];
+                    if (email.equals(storedEmail) && 
+                            preguntaSeguridad.equals(storedPregunta) &&
+                            respuestaSeguridad.equals(storedRespuesta)) {
+                        return storedPassword;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     /**
      * @param args the command line arguments
      */
@@ -233,15 +194,16 @@ public class RecuperarContra extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JLabel lblApellidoF;
+    private javax.swing.JLabel lblApellidoF1;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblCorreoF;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblMediPlus;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPreguntaF;
     private javax.swing.JLabel lblRespuesta;
-    private javax.swing.JLabel lblRespuestaF;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JComboBox<String> txtPregunta;
     private javax.swing.JTextField txtRespuesta;

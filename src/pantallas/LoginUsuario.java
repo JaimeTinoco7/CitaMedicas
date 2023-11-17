@@ -92,6 +92,12 @@ public class LoginUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, 40));
 
         jLabel1.setText("¿Olvidaste tu contraseña?");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
@@ -175,6 +181,13 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
         this.setVisible(false);
         
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        RecuperarContra pantalla = new RecuperarContra();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
