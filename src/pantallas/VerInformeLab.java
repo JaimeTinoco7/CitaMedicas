@@ -8,12 +8,12 @@ package pantallas;
  *
  * @author jaime
  */
-public class ListaDeDoctores2 extends javax.swing.JFrame {
+public class VerInformeLab extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioPantalla
      */
-    public ListaDeDoctores2() {
+    public VerInformeLab() {
         initComponents();
     }
 
@@ -28,19 +28,8 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
 
         pnlCentral = new javax.swing.JPanel();
         pnlColor = new javax.swing.JPanel();
+        lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        lblDoctores = new javax.swing.JLabel();
-        lblPerfil1 = new javax.swing.JLabel();
-        lblSacarCita1 = new javax.swing.JLabel();
-        lblVerPerfil1 = new javax.swing.JLabel();
-        txtDoctor1 = new javax.swing.JTextField();
-        lblPerfil2 = new javax.swing.JLabel();
-        lblSacarCita2 = new javax.swing.JLabel();
-        lblVerPerfil2 = new javax.swing.JLabel();
-        txtDoctor2 = new javax.swing.JTextField();
-        cbxDoctores = new javax.swing.JComboBox<>();
-        lblSiguiente = new javax.swing.JLabel();
-        lblSiguiente1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,77 +40,30 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
         pnlColor.setBackground(new java.awt.Color(13, 143, 131));
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
-        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
+        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerInforme.png"))); // NOI18N
+        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 150, 40));
 
         pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
-
-        lblDoctores.setText("Doctores:");
-        pnlCentral.add(lblDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
-
-        lblPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrMarco.png"))); // NOI18N
-        pnlCentral.add(lblPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
-
-        lblSacarCita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
-        pnlCentral.add(lblSacarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 60));
-
-        lblVerPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
-        pnlCentral.add(lblVerPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, 60));
-
-        txtDoctor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtDoctor1.setFocusable(false);
-        pnlCentral.add(txtDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 370, 200));
-
-        lblPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DrPablo.png"))); // NOI18N
-        pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
-
-        lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
-        pnlCentral.add(lblSacarCita2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 110, 60));
-
-        lblVerPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
-        pnlCentral.add(lblVerPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 120, 60));
-
-        txtDoctor2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtDoctor2.setFocusable(false);
-        pnlCentral.add(txtDoctor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 200));
-
-        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
-
-        lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
-        lblSiguiente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSiguienteMouseClicked(evt);
-            }
-        });
-        pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
-
-        lblSiguiente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
-        lblSiguiente1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSiguiente1MouseClicked(evt);
-            }
-        });
-        pnlCentral.add(lblSiguiente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguienteMouseClicked
-        ListaDeDoctores1 pantalla = new ListaDeDoctores1();
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_lblSiguienteMouseClicked
-
-    private void lblSiguiente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguiente1MouseClicked
-        ListaDeDoctores3 pantalla = new ListaDeDoctores3();
-        pantalla.setLocationRelativeTo(this);
-        pantalla.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_lblSiguiente1MouseClicked
+    }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -140,13 +82,13 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListaDeDoctores2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerInformeLab.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListaDeDoctores2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerInformeLab.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListaDeDoctores2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerInformeLab.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListaDeDoctores2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VerInformeLab.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -408,26 +350,15 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListaDeDoctores2().setVisible(true);
+                new VerInformeLab().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cbxDoctores;
-    private javax.swing.JLabel lblDoctores;
-    private javax.swing.JLabel lblPerfil1;
-    private javax.swing.JLabel lblPerfil2;
-    private javax.swing.JLabel lblSacarCita1;
-    private javax.swing.JLabel lblSacarCita2;
-    private javax.swing.JLabel lblSiguiente;
-    private javax.swing.JLabel lblSiguiente1;
+    private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblVerPerfil1;
-    private javax.swing.JLabel lblVerPerfil2;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlColor;
-    private javax.swing.JTextField txtDoctor1;
-    private javax.swing.JTextField txtDoctor2;
     // End of variables declaration//GEN-END:variables
 }
