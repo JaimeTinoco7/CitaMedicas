@@ -8,12 +8,12 @@ package pantallas;
  *
  * @author jaime
  */
-public class doctorJuanManuelMenendez extends javax.swing.JFrame {
+public class doctorPabloMorenoMartínez extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioPantalla
      */
-    public doctorJuanManuelMenendez() {
+    public doctorPabloMorenoMartínez() {
         initComponents();
     }
 
@@ -31,7 +31,7 @@ public class doctorJuanManuelMenendez extends javax.swing.JFrame {
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,15 +53,15 @@ public class doctorJuanManuelMenendez extends javax.swing.JFrame {
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
         pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
 
-        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 65));
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/JUANMENENDEZ.png"))); // NOI18N
-        pnlCentral.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 460, 550));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctor Pablo Moreno Martínez.png"))); // NOI18N
+        pnlCentral.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 410, 230));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/juanmenendez2.png"))); // NOI18N
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 420, 220));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctor Pablo Moreno Martínez1.png"))); // NOI18N
+        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 410, 510));
 
-        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 750));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 750));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -90,13 +90,13 @@ public class doctorJuanManuelMenendez extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(doctorJuanManuelMenendez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(doctorPabloMorenoMartínez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(doctorJuanManuelMenendez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(doctorPabloMorenoMartínez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(doctorJuanManuelMenendez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(doctorPabloMorenoMartínez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(doctorJuanManuelMenendez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(doctorPabloMorenoMartínez.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -1126,13 +1126,13 @@ public class doctorJuanManuelMenendez extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new doctorJuanManuelMenendez().setVisible(true);
+                new doctorPabloMorenoMartínez().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
