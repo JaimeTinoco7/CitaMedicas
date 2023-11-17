@@ -88,7 +88,7 @@ public class LoginUsuario extends javax.swing.JFrame {
                 lblIniciarSesionMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 580, -1, 40));
+        pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, 40));
 
         jLabel1.setText("¿Olvidaste tu contraseña?");
         pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
@@ -99,7 +99,11 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-                                   
+   String correo = txtCorreo.getText();
+String contraseña = txtPassword.getText();
+
+
+if (!correo.isEmpty() && !contraseña.isEmpty()) {
     boolean usuarioEncontrado = false;
     Usuario usuarioAutenticado = null;
 
@@ -108,8 +112,8 @@ public class LoginUsuario extends javax.swing.JFrame {
             String line = scanner.nextLine();
             String[] userData = line.split(",");
 
-            if (userData.length >= 5 && txtCorreo.getText().equals(userData[3])
-                    && txtPassword.getText().equals(userData[4])) {
+            if (userData.length >= 5 && correo.equals(userData[3])
+                    && contraseña.equals(userData[4])) {
                 usuarioAutenticado = new Usuario(userData[0], 
                         userData[1], userData[2], userData[3]);
                 usuarioEncontrado = true;
@@ -123,18 +127,16 @@ public class LoginUsuario extends javax.swing.JFrame {
                 JOptionPane.ERROR_MESSAGE);
     }
 
+    
     if (usuarioEncontrado && usuarioAutenticado != null) {
-        JOptionPane.showMessageDialog(this, "¡Bienvenido!",
-                "Inicio de sesión exitoso",
-                JOptionPane.INFORMATION_MESSAGE);
-
-        MenuUsuario pantalla = new MenuUsuario();
-        pantalla.setUsuarioAutenticado(usuarioAutenticado);
-        pantalla.setVisible(true);
-        this.dispose();
+       
     } else {
+        
+        JOptionPane.showMessageDialog(this, 
+                "Usuario o contraseña incorrectos.", "Error", 
+                JOptionPane.ERROR_MESSAGE);
         int respuesta = JOptionPane.showConfirmDialog(this, 
-                "Usuario o contraseña incorrectos. ¿Desea crear una cuenta?", 
+                "¿Desea crear una cuenta?", 
                 "Error de inicio de sesión", 
                 JOptionPane.YES_NO_OPTION, 
                 JOptionPane.ERROR_MESSAGE);
@@ -144,6 +146,13 @@ public class LoginUsuario extends javax.swing.JFrame {
             this.dispose();
         }
     }
+} else {
+    // Mostrar mensaje si faltan campos
+    JOptionPane.showMessageDialog(this, 
+            "Completa los campos de correo y contraseña.", "Error", 
+            JOptionPane.ERROR_MESSAGE);
+}
+
 
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
