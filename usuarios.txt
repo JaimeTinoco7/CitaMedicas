@@ -11,3 +11,4 @@ Luz,Quispe,Femenino,luz123@gmail.com,12345,¿Cuál fue el nombre de tu primera m
 ,,Masculino,,,¿Cuál es tu nik de jugador?,
 ,,Masculino,,,¿Cuál es tu nik de jugador?,
 ,,Masculino,,,¿Cuál es tu nik de jugador?,
+Juan,Ramirez,Masculino,jramirez123@gmail.com,12345678910@,¿Cuál es tu nik de jugador?,nose123

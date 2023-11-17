@@ -109,22 +109,21 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-   String correo = txtCorreo.getText();
+        String correo = txtCorreo.getText();
 String contraseña = txtPassword.getText();
-
 
 if (!correo.isEmpty() && !contraseña.isEmpty()) {
     boolean usuarioEncontrado = false;
     Usuario usuarioAutenticado = null;
-
+    
     try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] userData = line.split(",");
-
+            
             if (userData.length >= 5 && correo.equals(userData[3])
                     && contraseña.equals(userData[4])) {
-                usuarioAutenticado = new Usuario(userData[0], 
+                usuarioAutenticado = new Usuario(userData[0],
                         userData[1], userData[2], userData[3]);
                 usuarioEncontrado = true;
                 break;
@@ -132,37 +131,39 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
         }
     } catch (FileNotFoundException ex) {
         ex.printStackTrace();
-        JOptionPane.showMessageDialog(this, 
-                "Error al abrir el archivo de usuarios.", "Error", 
+        JOptionPane.showMessageDialog(this,
+                "Error al abrir el archivo de usuarios.", "Error",
                 JOptionPane.ERROR_MESSAGE);
     }
-
     
     if (usuarioEncontrado && usuarioAutenticado != null) {
-       
+        // Aquí abres la ventana del menú principal
+        MenuUsuario pantallaMenu = new MenuUsuario();
+        pantallaMenu.setUsuarioAutenticado(usuarioAutenticado); // Si tienes un método para establecer el usuario autenticado
+        pantallaMenu.setLocationRelativeTo(this);
+        pantallaMenu.setVisible(true);
+        this.setVisible(false);
     } else {
-        
-        JOptionPane.showMessageDialog(this, 
-                "Usuario o contraseña incorrectos.", "Error", 
+        JOptionPane.showMessageDialog(this,
+                "Usuario o contraseña incorrectos.", "Error",
                 JOptionPane.ERROR_MESSAGE);
-        int respuesta = JOptionPane.showConfirmDialog(this, 
-                "¿Desea crear una cuenta?", 
-                "Error de inicio de sesión", 
-                JOptionPane.YES_NO_OPTION, 
+        int respuesta = JOptionPane.showConfirmDialog(this,
+                "¿Desea crear una cuenta?",
+                "Error de inicio de sesión",
+                JOptionPane.YES_NO_OPTION,
                 JOptionPane.ERROR_MESSAGE);
         if (respuesta == JOptionPane.YES_OPTION) {
-            RegisterUsuario pantalla = new RegisterUsuario();
-            pantalla.setVisible(true);
+            RegisterUsuario pantallaRegistro = new RegisterUsuario();
+            pantallaRegistro.setVisible(true);
             this.dispose();
         }
     }
 } else {
     // Mostrar mensaje si faltan campos
-    JOptionPane.showMessageDialog(this, 
-            "Completa los campos de correo y contraseña.", "Error", 
+    JOptionPane.showMessageDialog(this,
+            "Completa los campos de correo y contraseña.", "Error",
             JOptionPane.ERROR_MESSAGE);
 }
-
 
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
