@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ContactanosDoc.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/EnviarInforme.java</file>
@@ -27,5 +28,8 @@
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/EnviarInformeLab.java</file>
             <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores4.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 1880b6a8cd738b8a56a3b9e60659c0b2c4c79fd5
     </open-files>
 </project-private>
