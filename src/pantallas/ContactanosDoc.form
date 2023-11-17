@@ -48,21 +48,21 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="lblFacebook" min="-2" pref="330" max="-2" attributes="0"/>
+                          <Component id="lblFacebookDoc" min="-2" pref="330" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                          <Component id="lblWhatsApp" min="-2" pref="330" max="-2" attributes="0"/>
+                          <Component id="lblWhatsAppDoc" min="-2" pref="330" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblInstagram" min="-2" pref="330" max="-2" attributes="0"/>
+                      <Component id="lblInstagramDoc" min="-2" pref="330" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                          <Component id="lblYoutube" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblYoutubeDoc" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblTikTok" min="-2" pref="330" max="-2" attributes="0"/>
+                      <Component id="lblTikTokDoc" min="-2" pref="330" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                          <Component id="lblCorreo" min="-2" pref="330" max="-2" attributes="0"/>
+                          <Component id="lblCorreoDoc" min="-2" pref="330" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -75,24 +75,24 @@
               <Group type="102" alignment="1" attributes="0">
                   <Component id="pnlColor" min="-2" pref="65" max="-2" attributes="0"/>
                   <EmptySpace pref="29" max="32767" attributes="0"/>
-                  <Component id="lblFacebook" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblFacebookDoc" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="lblWhatsApp" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblWhatsAppDoc" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="lblInstagram" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblInstagramDoc" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                  <Component id="lblYoutube" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="lblYoutubeDoc" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="lblTikTok" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="lblTikTokDoc" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="lblCorreo" min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="lblCorreoDoc" min="-2" pref="80" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblCorreo">
+        <Component class="javax.swing.JLabel" name="lblCorreoDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/threads.png"/>
@@ -102,10 +102,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblCorreoMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblCorreoDocMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblFacebook">
+        <Component class="javax.swing.JLabel" name="lblFacebookDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/fb.png"/>
@@ -115,10 +115,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblFacebookMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblFacebookDocMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblWhatsApp">
+        <Component class="javax.swing.JLabel" name="lblWhatsAppDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/wsp.png"/>
@@ -128,10 +128,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblWhatsAppMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblWhatsAppDocMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblInstagram">
+        <Component class="javax.swing.JLabel" name="lblInstagramDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/ig.png"/>
@@ -141,10 +141,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblInstagramMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblInstagramDocMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblYoutube">
+        <Component class="javax.swing.JLabel" name="lblYoutubeDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/yt.png"/>
@@ -154,10 +154,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblYoutubeMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblYoutubeDocMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblTikTok">
+        <Component class="javax.swing.JLabel" name="lblTikTokDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/tiktok.png"/>
@@ -167,7 +167,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblTikTokMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblTikTokDocMouseClicked"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="pnlColor">

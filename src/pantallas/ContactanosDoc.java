@@ -27,12 +27,12 @@ public class ContactanosDoc extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblCorreo = new javax.swing.JLabel();
-        lblFacebook = new javax.swing.JLabel();
-        lblWhatsApp = new javax.swing.JLabel();
-        lblInstagram = new javax.swing.JLabel();
-        lblYoutube = new javax.swing.JLabel();
-        lblTikTok = new javax.swing.JLabel();
+        lblCorreoDoc = new javax.swing.JLabel();
+        lblFacebookDoc = new javax.swing.JLabel();
+        lblWhatsAppDoc = new javax.swing.JLabel();
+        lblInstagramDoc = new javax.swing.JLabel();
+        lblYoutubeDoc = new javax.swing.JLabel();
+        lblTikTokDoc = new javax.swing.JLabel();
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
@@ -41,51 +41,51 @@ public class ContactanosDoc extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(13, 143, 131));
 
-        lblCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
-        lblCorreo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblCorreoDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/threads.png"))); // NOI18N
+        lblCorreoDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblCorreoDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblCorreoMouseClicked(evt);
+                lblCorreoDocMouseClicked(evt);
             }
         });
 
-        lblFacebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fb.png"))); // NOI18N
-        lblFacebook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblFacebook.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblFacebookDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fb.png"))); // NOI18N
+        lblFacebookDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblFacebookDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblFacebookMouseClicked(evt);
+                lblFacebookDocMouseClicked(evt);
             }
         });
 
-        lblWhatsApp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wsp.png"))); // NOI18N
-        lblWhatsApp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblWhatsApp.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblWhatsAppDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/wsp.png"))); // NOI18N
+        lblWhatsAppDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblWhatsAppDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblWhatsAppMouseClicked(evt);
+                lblWhatsAppDocMouseClicked(evt);
             }
         });
 
-        lblInstagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ig.png"))); // NOI18N
-        lblInstagram.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblInstagram.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblInstagramDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ig.png"))); // NOI18N
+        lblInstagramDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblInstagramDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblInstagramMouseClicked(evt);
+                lblInstagramDocMouseClicked(evt);
             }
         });
 
-        lblYoutube.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yt.png"))); // NOI18N
-        lblYoutube.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblYoutube.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblYoutubeDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yt.png"))); // NOI18N
+        lblYoutubeDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblYoutubeDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblYoutubeMouseClicked(evt);
+                lblYoutubeDocMouseClicked(evt);
             }
         });
 
-        lblTikTok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiktok.png"))); // NOI18N
-        lblTikTok.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblTikTok.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblTikTokDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiktok.png"))); // NOI18N
+        lblTikTokDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblTikTokDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblTikTokMouseClicked(evt);
+                lblTikTokDocMouseClicked(evt);
             }
         });
 
@@ -112,18 +112,18 @@ public class ContactanosDoc extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(lblFacebook, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblFacebookDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(lblWhatsApp, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblInstagram, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblWhatsAppDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblInstagramDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(lblYoutube))
-                    .addComponent(lblTikTok, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblYoutubeDoc))
+                    .addComponent(lblTikTokDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(lblCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblCorreoDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(pnlColor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -132,17 +132,17 @@ public class ContactanosDoc extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(pnlColor, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(lblFacebook)
+                .addComponent(lblFacebookDoc)
                 .addGap(10, 10, 10)
-                .addComponent(lblWhatsApp)
+                .addComponent(lblWhatsAppDoc)
                 .addGap(10, 10, 10)
-                .addComponent(lblInstagram)
+                .addComponent(lblInstagramDoc)
                 .addGap(10, 10, 10)
-                .addComponent(lblYoutube, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblYoutubeDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(lblTikTok, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTikTokDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(lblCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblCorreoDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
         );
 
@@ -160,62 +160,62 @@ public class ContactanosDoc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCorreoMouseClicked
+    private void lblCorreoDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCorreoDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://www.instagram.com/mediplus184/"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblCorreoMouseClicked
+    }//GEN-LAST:event_lblCorreoDocMouseClicked
 
-    private void lblFacebookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFacebookMouseClicked
+    private void lblFacebookDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblFacebookDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://www.facebook.com/people/MediPlus/61553778142795/?sk=followers&locale=es_LA"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblFacebookMouseClicked
+    }//GEN-LAST:event_lblFacebookDocMouseClicked
 
-    private void lblWhatsAppMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblWhatsAppMouseClicked
+    private void lblWhatsAppDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblWhatsAppDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://chat.whatsapp.com/KEv303KvG1o1GFPiAubTmk"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblWhatsAppMouseClicked
+    }//GEN-LAST:event_lblWhatsAppDocMouseClicked
 
-    private void lblInstagramMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInstagramMouseClicked
+    private void lblInstagramDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInstagramDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://www.instagram.com/mediplus184/"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblInstagramMouseClicked
+    }//GEN-LAST:event_lblInstagramDocMouseClicked
 
-    private void lblYoutubeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYoutubeMouseClicked
+    private void lblYoutubeDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYoutubeDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://www.youtube.com/channel/UCmZ2akKrpi-uMDAv2xLMABw"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblYoutubeMouseClicked
+    }//GEN-LAST:event_lblYoutubeDocMouseClicked
 
-    private void lblTikTokMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTikTokMouseClicked
+    private void lblTikTokDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTikTokDocMouseClicked
         try {
             java.awt.Desktop.getDesktop().browse(new java.net.URI
                 ("https://www.tiktok.com/@medi_plus18"));
         } catch (java.io.IOException | java.net.URISyntaxException e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_lblTikTokMouseClicked
+    }//GEN-LAST:event_lblTikTokDocMouseClicked
 
     private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
-        MenuUsuario pantalla = new MenuUsuario();
+        MenuDoctor pantalla = new MenuDoctor();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
@@ -258,14 +258,14 @@ public class ContactanosDoc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblFacebook;
-    private javax.swing.JLabel lblInstagram;
+    private javax.swing.JLabel lblCorreoDoc;
+    private javax.swing.JLabel lblFacebookDoc;
+    private javax.swing.JLabel lblInstagramDoc;
     private javax.swing.JLabel lblRegreso;
-    private javax.swing.JLabel lblTikTok;
+    private javax.swing.JLabel lblTikTokDoc;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblWhatsApp;
-    private javax.swing.JLabel lblYoutube;
+    private javax.swing.JLabel lblWhatsAppDoc;
+    private javax.swing.JLabel lblYoutubeDoc;
     private javax.swing.JPanel pnlColor;
     // End of variables declaration//GEN-END:variables
 }
