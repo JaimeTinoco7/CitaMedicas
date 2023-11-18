@@ -1,3 +1,10 @@
-Nombre1,Apellido1,Especialidad1,correo1@ejemplo.com,contraseña1
-Nombre2,Apellido2,Especialidad2,correo2@ejemplo.com,contraseña2
-Nombre3,Apellido3,Especialidad3,correo3@ejemplo.com,contraseña3
+Isamar,Benyi Guitierrez,Gastroenterología,isabella.hernandez123@example.com,Gastro!23
+Juan Manuel,Menedez,Cardiología,andres.mendoza456@gmail.com,Cardi456!
+Marco,Mejia,Medicina General,valentina.vargas789@gmail.com,MedGen789!
+Pablo,Moreno Martinez,Ginecología,camila.morales234@gmail.com,Gineco234@
+Elizabeth,Espinal,Pediatría,santiago.espinoza567@gmail.com,Pedia567#
+Angelica,Rivera,Dermatología,sofia.rios890@gmail.com,Derma890$
+Edgard,Chavez,Gastroenterología,lucas.sanchez901@gmail.com,Gastro901%
+Francisco,Chavez,Psicología,carolina.castro234@gmail.com,Psico234&
+Carlos,Escalante,Traumatología,martin.gongora567@gmail.com,Trauma567*
+Silvia,De Los Santos,Otorrinolaringología,valeria.flores890@gmail.com,Otorri890!

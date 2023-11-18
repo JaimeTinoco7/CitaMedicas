@@ -4,6 +4,8 @@
  */
 package pantallas;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -182,57 +184,62 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
-        String nombre = txtNombre.getText();//Obtiene el nombre
-        String apellido = txtApellido.getText();
-        String genero = (String) cbxGenero.getSelectedItem();//Obtiene el item seleccionado
-        String correo = txtCorreo.getText();
-        String contraseña = txtPassword.getText();
-        String preguntaSeguridad = (String) cbxPregunta.getSelectedItem();
-        String respuestaSeguridad = txtRespuesta.getText();
+         String nombre = txtNombre.getText();
+    String apellido = txtApellido.getText();
+    String genero = (String) cbxGenero.getSelectedItem();
+    String correo = txtCorreo.getText();
+    String contraseña = txtPassword.getText();
+    String preguntaSeguridad = (String) cbxPregunta.getSelectedItem();
+    String respuestaSeguridad = txtRespuesta.getText();
 
-        if (!nombre.isEmpty() && !apellido.isEmpty() && !correo.isEmpty()
-                && !contraseña.isEmpty() && !respuestaSeguridad.isEmpty()) {
-            // Validación de la contraseña
-            if (contraseña.length() >= 12 && contieneSimbolo(contraseña)) {
-                try {
-                    FileWriter fileWriter
-                            = new FileWriter("usuarios.txt", true);
-                    PrintWriter printWriter
-                            = new PrintWriter(fileWriter);
+    boolean correoExistente = verificarCorreoExistente(correo);
 
-                    printWriter.println(nombre + "," + apellido + "," + genero
-                            + "," + correo + "," + contraseña + ","
-                            + preguntaSeguridad + "," + respuestaSeguridad);
+    if (correoExistente) {
+        JOptionPane.showMessageDialog(this,
+                "El correo ya está registrado. Intente con otro correo.",
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+    } else if (!nombre.isEmpty() && !apellido.isEmpty() && !correo.isEmpty()
+            && !contraseña.isEmpty() && !respuestaSeguridad.isEmpty()) {
 
-                    printWriter.close();
+        if (contraseña.length() >= 12 && contieneSimbolo(contraseña)) {
+            try {
+                FileWriter fileWriter = new FileWriter("usuarios.txt", true);
+                PrintWriter printWriter = new PrintWriter(fileWriter);
 
-                    JOptionPane.showMessageDialog(this,
-                            "Cuenta creada exitosamente", "Éxito",
-                            JOptionPane.INFORMATION_MESSAGE);
+                printWriter.println(nombre + "," + apellido + "," + genero
+                        + "," + correo + "," + contraseña + ","
+                        + preguntaSeguridad + "," + respuestaSeguridad);
 
-                    LoginUsuario pantalla = new LoginUsuario();
-                    pantalla.setLocationRelativeTo(this);
-                    pantalla.setVisible(true);
-                    this.setVisible(false);
-                } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(this,
-                            "Error al crear la cuenta."
-                                    + " Inténtalo de nuevo.",
-                            "Error", JOptionPane.ERROR_MESSAGE);
-                    ex.printStackTrace();
-                }
-            } else {
+                printWriter.close();
+
                 JOptionPane.showMessageDialog(this,
-                        "La contraseña debe tener al menos 12"
-                        + " caracteres y al menos 1 símbolo.",
-                        "Error en la contraseña",
+                        "Cuenta creada exitosamente", "Éxito",
+                        JOptionPane.INFORMATION_MESSAGE);
+
+                LoginUsuario pantalla = new LoginUsuario();
+                pantalla.setLocationRelativeTo(this);
+                pantalla.setVisible(true);
+                this.setVisible(false);
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Error al crear la cuenta. Inténtalo de nuevo.",
+                        "Error",
                         JOptionPane.ERROR_MESSAGE);
+                ex.printStackTrace();
             }
         } else {
             JOptionPane.showMessageDialog(this,
-                    "Completa todos los campos obligatorios",
-                    "Error", JOptionPane.ERROR_MESSAGE);
+                    "La contraseña debe tener al menos 12 caracteres y al menos 1 símbolo.",
+                    "Error en la contraseña",
+                    JOptionPane.ERROR_MESSAGE);
         }
+    } else {
+        JOptionPane.showMessageDialog(this,
+                "Completa todos los campos obligatorios",
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_lblRegistrarseMouseClicked
 
     private void lblYaTengoCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblYaTengoCuentaMouseClicked
@@ -249,6 +256,23 @@ public class RegisterUsuario extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_lblRegresarMouseClicked
 
+    private boolean verificarCorreoExistente(String correo) {
+    boolean correoExistente = false;
+    try (BufferedReader reader = 
+            new BufferedReader(new FileReader("usuarios.txt"))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts.length >= 4 && parts[3].equals(correo)) {
+                correoExistente = true;
+                break;
+            }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return correoExistente;
+}
     private boolean contieneSimbolo(String contraseña) {
         for (char c : contraseña.toCharArray()) {
             if (!Character.isLetterOrDigit(c)) {

@@ -118,72 +118,52 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-        String correo = txtCorreo.getText();
-        String contraseña = txtPassword.getText();
+       String correo = txtCorreo.getText();
+String contraseña = txtPassword.getText();
 
-        if (!correo.isEmpty() && !contraseña.isEmpty()) {
-            boolean usuarioEncontrado = false;
-            Usuario usuarioAutenticado = null;
-            boolean correoExistente = false;
+if (!correo.isEmpty() && !contraseña.isEmpty()) {
+    boolean usuarioEncontrado = false;
+    Usuario usuarioAutenticado = null;
 
-            try (Scanner scanner = 
-                    new Scanner(new File("usuarios.txt"))) {
-                while (scanner.hasNextLine()) {
-                    String line = scanner.nextLine();
-                    String[] userData = line.split(",");
-                    if (userData.length >= 5 && correo.equals(userData[3])
-                            && contraseña.equals(userData[4])) {
-                        usuarioAutenticado = new Usuario(userData[0],
-                                userData[1], userData[2], userData[3]);
-                        usuarioEncontrado = true;
-                        break;
-                    } else if (userData.length >= 5 &&
-                            correo.equals(userData[3])) {
-                        correoExistente = true;
-                        break;
-                    }
-                }
-            } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
-                JOptionPane.showMessageDialog(LoginUsuario.this,
-                        "Error al abrir el archivo de usuarios.", 
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE);
+    try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] userData = line.split(",");
+            if (userData.length >= 5 && correo.equals(userData[3])
+                    && contraseña.equals(userData[4])) {
+                usuarioAutenticado = new Usuario(userData[0],
+                        userData[1], userData[2], userData[3]);
+                usuarioEncontrado = true;
+                break;
             }
-
-            if (usuarioEncontrado && usuarioAutenticado != null) {
-                // Lógica para iniciar sesión
-            } else if (correoExistente) {
-                JOptionPane.showMessageDialog(LoginUsuario.this,
-                        "El correo ya está registrado."
-                        + " Intente con otro correo.",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE);
-            } else {
-                // Lógica para registrar un nuevo usuario
-                try (PrintWriter writer
-                        = new PrintWriter(new FileWriter("usuarios.txt", 
-                                true))) {
-                    writer.println("Datos del nuevo usuario");
-                    JOptionPane.showMessageDialog(LoginUsuario.this,
-                            "Usuario registrado con éxito.", 
-                            "Registro exitoso",
-                            JOptionPane.INFORMATION_MESSAGE);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                    JOptionPane.showMessageDialog(LoginUsuario.this,
-                            "Error al registrar el usuario.", 
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE);
-                }
-            }
-        } else {
-            JOptionPane.showMessageDialog(LoginUsuario.this,
-                    "Completa los campos de correo y contraseña.", 
-                    "Error",
-                    JOptionPane.ERROR_MESSAGE);
         }
+    } catch (FileNotFoundException ex) {
+        ex.printStackTrace();
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Error al abrir el archivo de usuarios.", 
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+    }
 
+    if (usuarioEncontrado) {
+        // Lógica para manejar inicio de sesión exitoso
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Inicio de sesión exitoso.", 
+                "¡Bienvenido!",
+                JOptionPane.INFORMATION_MESSAGE);
+        // Resto del código para manejar la sesión iniciada
+    } else {
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Correo o contraseña incorrectos. Inténtalo de nuevo.", 
+                "Error de inicio de sesión",
+                JOptionPane.ERROR_MESSAGE);
+    }
+} else {
+    JOptionPane.showMessageDialog(LoginUsuario.this,
+            "Completa los campos de correo y contraseña.", 
+            "Error",
+            JOptionPane.ERROR_MESSAGE);
+}
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
 
