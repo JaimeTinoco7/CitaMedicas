@@ -8,12 +8,12 @@ package pantallas;
  *
  * @author jaime
  */
-public class doctoraElizabethEspinal extends javax.swing.JFrame {
+public class PerfinDrPablo extends javax.swing.JFrame {
 
     /**
      * Creates new form InicioPantalla
      */
-    public doctoraElizabethEspinal() {
+    public PerfinDrPablo() {
         initComponents();
     }
 
@@ -30,8 +30,8 @@ public class doctoraElizabethEspinal extends javax.swing.JFrame {
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblDrPablo = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,15 +53,15 @@ public class doctoraElizabethEspinal extends javax.swing.JFrame {
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
         pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
 
-        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 65));
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctora Elizabeth Espinal.png"))); // NOI18N
-        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 420, 240));
+        lblDrPablo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctor Pablo Moreno Martínez.png"))); // NOI18N
+        pnlCentral.add(lblDrPablo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 410, 230));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctora Elizabeth Espinal1.png"))); // NOI18N
-        pnlCentral.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 400, 550));
+        lblInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doctor Pablo Moreno Martínez1.png"))); // NOI18N
+        pnlCentral.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 410, 510));
 
-        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 750));
+        getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 750));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -90,13 +90,13 @@ public class doctoraElizabethEspinal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(doctoraElizabethEspinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfinDrPablo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(doctoraElizabethEspinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfinDrPablo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(doctoraElizabethEspinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfinDrPablo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(doctoraElizabethEspinal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PerfinDrPablo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -2150,14 +2150,14 @@ public class doctoraElizabethEspinal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new doctoraElizabethEspinal().setVisible(true);
+                new PerfinDrPablo().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblDrPablo;
+    private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlCentral;

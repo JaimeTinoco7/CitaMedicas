@@ -2,3 +2,4 @@ Juan,Jara,Masculino,juanjara123@gmail.com,1234,¿En qué ciudad naciste?,Lima
 Luz,Quispe,Femenino,luz123@gmail.com,12345,¿Cuál fue el nombre de tu primera mascota?,Micho
 Juan,Ramirez,Masculino,jramirez123@gmail.com,12345678910@,¿Cuál es tu nik de jugador?,nose123
 Lupita,Carrosa,Femenino,Lupitasiseve@gmail.com,12345678910@,¿En qué ciudad naciste?,Lima
+Luis,Ramirez,Masculino,luisr123@gmail.com,1234567891011@,¿Cuál es tu nick de jugador?,lolero123

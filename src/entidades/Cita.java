@@ -6,92 +6,53 @@ package entidades;
 
 import java.util.Date;
 
-/**
- *
- * @author jaime
- */
+
 public class Cita {
-    
-    //atributos
-    
-    
-    private int id;
-    private Date fechaHora;
-    private InformeMedico informeMedico;
-    private String estado;
-    private Paciente paciente;
-    private Medico medico;
+    private String paciente;
+    private Date fecha;
+    private Date hora;
+    private String motivo;
 
-    public Cita(Paciente paciente, Medico medico, Date fechaHora) {
-        this.fechaHora = fechaHora;
+    // Constructor
+    public Cita(String paciente, Date fecha, Date hora, String motivo) {
         this.paciente = paciente;
-        this.medico = medico;
+        this.fecha = fecha;
+        this.hora = hora;
+        this.motivo = motivo;
     }
 
+    public Cita(){}
 
-    
-    
-
-    public Cita(int id, Date fechaHora, InformeMedico informeMedico, 
-            Paciente paciente, Medico medico) {
-        this.id = id;
-        this.fechaHora = fechaHora;
-        this.informeMedico = informeMedico;
-        this.paciente = paciente;
-        this.medico = medico;
-        estado = "Programado";
-        
-    }
-
-    
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getFechaHora() {
-        return fechaHora;
-    }
-
-    public void setFechaHora(Date fechaHora) {
-        this.fechaHora = fechaHora;
-    }
-
-    public InformeMedico getInformeMedico() {
-        return informeMedico;
-    }
-
-    public void setInformeMedico(InformeMedico informeMedico) {
-        this.informeMedico = informeMedico;
-    }
-
-    public Paciente getPaciente() {
+    public String getPaciente() {
         return paciente;
     }
 
-    public void setPaciente(Paciente paciente) {
+    public void setPaciente(String paciente) {
         this.paciente = paciente;
     }
 
-    public Medico getMedico() {
-        return medico;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setMedico(Medico medico) {
-        this.medico = medico;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    public String getEstado() {
-        return estado;
+    public Date getHora() {
+        return hora;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setHora(Date hora) {
+        this.hora = hora;
     }
-    
-   
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
 }
+

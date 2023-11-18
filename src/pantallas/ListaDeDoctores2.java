@@ -39,8 +39,8 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
         lblVerPerfil2 = new javax.swing.JLabel();
         txtDoctor2 = new javax.swing.JTextField();
         cbxDoctores = new javax.swing.JComboBox<>();
+        lblAtras = new javax.swing.JLabel();
         lblSiguiente = new javax.swing.JLabel();
-        lblSiguiente1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,9 +63,19 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
         pnlCentral.add(lblPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
 
         lblSacarCita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        lblSacarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSacarCita1MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSacarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 60));
 
         lblVerPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        lblVerPerfil1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVerPerfil1MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblVerPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, 60));
 
         txtDoctor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -76,53 +86,150 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
         pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
 
         lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        lblSacarCita2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSacarCita2MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSacarCita2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 110, 60));
 
         lblVerPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        lblVerPerfil2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVerPerfil2MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblVerPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 120, 60));
 
         txtDoctor2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtDoctor2.setFocusable(false);
         pnlCentral.add(txtDoctor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 200));
 
-        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxDoctores.setMaximumRowCount(10);
+        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dra. Isamar Benyi Guitierrez", "Dr. Juan Manuel Menedez", "Dr. Marco Mejia Vargas", "Dr. Pablo Moreno Martinez", "Dra. Elizabeth Espinal", "Dra. Angelica Rivera", "Dr. Edgard Chavez", "Ps. Francisco Chavez", "Dr. Carlos Escalante", "Dra. Sivlia De Los Santos" }));
+        cbxDoctores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxDoctoresActionPerformed(evt);
+            }
+        });
         pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
-        lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
+        lblAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnAatras.png"))); // NOI18N
+        lblAtras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAtrasMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(lblAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
+
+        lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
         lblSiguiente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSiguienteMouseClicked(evt);
             }
         });
-        pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 110, 50));
-
-        lblSiguiente1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
-        lblSiguiente1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblSiguiente1MouseClicked(evt);
-            }
-        });
-        pnlCentral.add(lblSiguiente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
+        pnlCentral.add(lblSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 110, 50));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguienteMouseClicked
+    private void lblAtrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAtrasMouseClicked
         ListaDeDoctores1 pantalla = new ListaDeDoctores1();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblAtrasMouseClicked
+
+    private void lblSiguienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguienteMouseClicked
+        ListaDeDoctores3 pantalla = new ListaDeDoctores3();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblSiguienteMouseClicked
 
-    private void lblSiguiente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSiguiente1MouseClicked
-        ListaDeDoctores3 pantalla = new ListaDeDoctores3();
-        pantalla.setLocationRelativeTo(this);
-        pantalla.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_lblSiguiente1MouseClicked
+    private void cbxDoctoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxDoctoresActionPerformed
+         String nombreSeleccionado = (String) cbxDoctores.getSelectedItem();
 
+        
+        if (nombreSeleccionado.equals("Dra. Isamar Benyi Guitierrez") ||
+                nombreSeleccionado.equals("Dr. Juan Manuel Menedez")) {
+            abrirListaDeDoctores1();
+        } else if (nombreSeleccionado.equals("Dr. Marco Mejia Vargas") ||
+                nombreSeleccionado.equals("Dr. Pablo Moreno Martinez")) {
+            abrirListaDeDoctores2();
+        } else if (nombreSeleccionado.equals("Dra. Elizabeth Espinal") ||
+                nombreSeleccionado.equals("Dra. Angelica Rivera")) {
+            abrirListaDeDoctores3();
+        } else if (nombreSeleccionado.equals("Dr. Edgard Chavez") ||
+                nombreSeleccionado.equals("Ps. Francisco Chavez")) {
+            abrirListaDeDoctores4();
+        } else if (nombreSeleccionado.equals("Dr. Carlos Escalante") ||
+                nombreSeleccionado.equals("Dra. Sivlia De Los Santos")) {
+            abrirListaDeDoctores5();
+        }
+    }//GEN-LAST:event_cbxDoctoresActionPerformed
+
+    private void lblSacarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSacarCita1MouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblSacarCita1MouseClicked
+
+    private void lblSacarCita2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSacarCita2MouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblSacarCita2MouseClicked
+
+    private void lblVerPerfil1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVerPerfil1MouseClicked
+        PerfilDrMarco pantalla = new PerfilDrMarco();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblVerPerfil1MouseClicked
+
+    private void lblVerPerfil2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVerPerfil2MouseClicked
+        PerfinDrPablo pantalla = new PerfinDrPablo();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblVerPerfil2MouseClicked
+
+    private void abrirListaDeDoctores1() {
+        ListaDeDoctores1 pantalla = new ListaDeDoctores1();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+
+    private void abrirListaDeDoctores2() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores3() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores4() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores5() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
     /**
      * @param args the command line arguments
      */
@@ -415,13 +522,13 @@ public class ListaDeDoctores2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbxDoctores;
+    private javax.swing.JLabel lblAtras;
     private javax.swing.JLabel lblDoctores;
     private javax.swing.JLabel lblPerfil1;
     private javax.swing.JLabel lblPerfil2;
     private javax.swing.JLabel lblSacarCita1;
     private javax.swing.JLabel lblSacarCita2;
     private javax.swing.JLabel lblSiguiente;
-    private javax.swing.JLabel lblSiguiente1;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblVerPerfil1;
     private javax.swing.JLabel lblVerPerfil2;

@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/ListaDeDoctores5.java</file>
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/doctoraIsamarGutierrez.java</file>
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/ListaDeDoctores2.java</file>
@@ -13,6 +14,29 @@
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/ListaDeDoctores4.java</file>
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/doctorJuanManuelMenendez.java</file>
             <file>file:/C:/Users/usuario/Desktop/PortableGit/avance/CitasMedicas/src/pantallas/doctorPabloMorenoMartínez.java</file>
+=======
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/RegisterUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores3.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/MenuUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/RecuperarContra.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ContactanosDoc.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDraAngelica.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ContactanosUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/EditarPerfil.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/entidades/MedicoDatos.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/LoginDoctor.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/MenuDoctor.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDraSilvia.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores1.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/LoginUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores4.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/citasm/CitasM.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores2.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDrEdgard.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/EnviarInforme.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores5.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/entidades/Medico.java</file>
+>>>>>>> e9e9faf70a0fb96b4a830e48f549b9b414a9fe79
         </group>
     </open-files>
 </project-private>

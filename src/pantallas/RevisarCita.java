@@ -4,17 +4,33 @@
  */
 package pantallas;
 
+import entidades.Cita;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * @author Liz
  */
 public class RevisarCita extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RevisarCita
-     */
+        private Map<String, List<Cita>> citasPorPaciente;
+       
+
+
     public RevisarCita() {
+        citasPorPaciente = new HashMap<>();
+        
         initComponents();
+        cargarCitasDesdeArchivo();
     }
 
     /**
@@ -51,9 +67,19 @@ public class RevisarCita extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PorAtender.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SacarCita.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -61,13 +87,13 @@ public class RevisarCita extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(47, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(51, 51, 51)
@@ -79,21 +105,18 @@ public class RevisarCita extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(110, 110, 110)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(21, 21, 21))
         );
 
@@ -110,6 +133,88 @@ public class RevisarCita extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+       mostrarMotivoSeleccionado();
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        String pacienteSeleccionado = (String) jComboBox1.getSelectedItem();
+    if (pacienteSeleccionado != null) {
+        List<Cita> citasDePaciente = citasPorPaciente.get(pacienteSeleccionado);
+        if (citasDePaciente != null && !citasDePaciente.isEmpty()) {
+            // Crear la pantalla ListaCitas y pasar la cita seleccionada
+            ListaCitas pantalla = new ListaCitas();
+            pantalla.setVisible(true);
+        }
+    }
+    }//GEN-LAST:event_jLabel3MouseClicked
+ private void cargarCitasDesdeArchivo() {
+    String archivoCitas = "citas.txt"; // Asegúrate de que el archivo exista y tenga datos válidos
+
+    try (BufferedReader reader = new BufferedReader(new FileReader(archivoCitas))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts.length == 4) { // Verifica que haya suficientes elementos en la línea
+                String nombrePaciente = parts[0].trim();
+
+                // Configurar la cita directamente con los datos obtenidos
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+
+                try {
+                    Date fecha = dateFormat.parse(parts[1].trim());
+                    Date hora = timeFormat.parse(parts[2].trim());
+
+                    Cita cita = new Cita(nombrePaciente, fecha, hora, parts[3].trim());
+
+                    // Verificar si el paciente ya tiene citas en el mapa, o crear una nueva lista si no existe
+                    List<Cita> citasDelPaciente = citasPorPaciente.getOrDefault(nombrePaciente, new ArrayList<>());
+
+                    // Agregar la cita a la lista de citas del paciente
+                    citasDelPaciente.add(cita);
+
+                    // Actualizar el mapa con la lista de citas del paciente
+                    citasPorPaciente.put(nombrePaciente, citasDelPaciente);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                    // Manejo de la excepción en caso de error al analizar fechas o horas
+                }
+            } else {
+                // La línea no tiene el formato esperado, puedes ignorarla o manejarla según sea necesario
+            }
+        }
+
+        // Llenar el JComboBox con los nombres de los pacientes
+        jComboBox1.removeAllItems();
+        for (String paciente : citasPorPaciente.keySet()) {
+            jComboBox1.addItem(paciente);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+        // Manejo de la excepción en caso de error de lectura del archivo
+    }
+ }
+
+    private void mostrarMotivoSeleccionado() {
+        String pacienteSeleccionado = (String) jComboBox1.getSelectedItem();
+        if (pacienteSeleccionado != null) {
+            List<Cita> citasDePaciente = citasPorPaciente.get(pacienteSeleccionado);
+            if (citasDePaciente != null) {
+                StringBuilder motivoTexto = new StringBuilder();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+
+                for (Cita cita : citasDePaciente) {
+                    motivoTexto.append("Fecha: ").append(dateFormat.format(cita.getFecha())).append("\n");
+                    motivoTexto.append("Hora: ").append(timeFormat.format(cita.getHora())).append("\n");
+                    motivoTexto.append("Motivo: ").append(cita.getMotivo()).append("\n\n");
+                }
+                jTextArea1.setText(motivoTexto.toString());
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments

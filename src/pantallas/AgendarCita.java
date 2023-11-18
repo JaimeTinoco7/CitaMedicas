@@ -155,22 +155,28 @@ public final class AgendarCita extends javax.swing.JFrame {
     }//GEN-LAST:event_lblRegresoMouseClicked
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
-        String nombrePaciente = txtNombre.getText();
-        String fecha = (String) cbxFecha.getSelectedItem();
-        String hora = (String) cbxHora.getSelectedItem();
-        String motivo = txtaSintomas.getText();
+String nombrePaciente = txtNombre.getText();
+String fecha = (String) cbxFecha.getSelectedItem();
+String hora = (String) cbxHora.getSelectedItem();
+String motivo = txtaSintomas.getText();
 
-        String archivoCitas = "citas.txt"; // Ruta completa al archivo de citas
 
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCitas, true))) {
+if (nombrePaciente.isEmpty() || fecha == null || hora == null || motivo.isEmpty()) {
+    JOptionPane.showMessageDialog(null, 
+            "Por favor, complete todos los campos antes de guardar la cita.");
+} else {
+    String archivoCitas = "citas.txt"; 
+
+    try (BufferedWriter writer = 
+            new BufferedWriter(new FileWriter(archivoCitas, true))) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
 
         Date date = dateFormat.parse(fecha);
         Date time = timeFormat.parse(hora);
 
-        String formattedFecha = dateFormat.format(date); 
-        String formattedHora = timeFormat.format(time); 
+        String formattedFecha = dateFormat.format(date);
+        String formattedHora = timeFormat.format(time);
 
         writer.write(nombrePaciente + "," + formattedFecha + "," + formattedHora + "," + motivo);
         writer.newLine();
@@ -179,6 +185,8 @@ public final class AgendarCita extends javax.swing.JFrame {
         e.printStackTrace();
         JOptionPane.showMessageDialog(null, "Error al guardar la cita");
     }
+}
+
     }//GEN-LAST:event_lblGuardarMouseClicked
 
     /**

@@ -26,15 +26,15 @@ public class SobreNosotrosDoc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlCentral = new javax.swing.JPanel();
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTituloDoc = new javax.swing.JLabel();
-        lblPortadaDoc = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(13, 143, 131));
+        pnlCentral.setBackground(new java.awt.Color(13, 143, 131));
 
         pnlColor.setBackground(new java.awt.Color(255, 255, 255));
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -50,24 +50,24 @@ public class SobreNosotrosDoc extends javax.swing.JFrame {
         lblTituloDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Sobre NosotrosDoc.png"))); // NOI18N
         pnlColor.add(lblTituloDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 180, 50));
 
-        lblPortadaDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PortadaSobreNosotrosDoc.png"))); // NOI18N
+        lblInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PortadaSobreNosotrosDoc.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
+        pnlCentral.setLayout(pnlCentralLayout);
+        pnlCentralLayout.setHorizontalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlColor, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(lblPortadaDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlCentralLayout.setVerticalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addComponent(pnlColor, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblPortadaDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -75,11 +75,11 @@ public class SobreNosotrosDoc extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlCentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlCentral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -128,10 +128,10 @@ public class SobreNosotrosDoc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblPortadaDoc;
+    private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTituloDoc;
+    private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlColor;
     // End of variables declaration//GEN-END:variables
 }

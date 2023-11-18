@@ -11,7 +11,7 @@ package pantallas;
 public class EnviarInforme extends javax.swing.JFrame {
 
     /**
-     * Creates new form EnviarInforme
+     * Creates new form EditarPerfil
      */
     public EnviarInforme() {
         initComponents();
@@ -27,20 +27,41 @@ public class EnviarInforme extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        pnlColor = new javax.swing.JPanel();
+        lblRegreso = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(13, 143, 131));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlColor.setBackground(new java.awt.Color(13, 143, 131));
+        pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
+        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Editar PerfilPac.png"))); // NOI18N
+        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 180, 50));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pnlColor, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 548, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(pnlColor, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 546, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -56,6 +77,13 @@ public class EnviarInforme extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -83,6 +111,7 @@ public class EnviarInforme extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EnviarInforme.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -94,5 +123,8 @@ public class EnviarInforme extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblRegreso;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JPanel pnlColor;
     // End of variables declaration//GEN-END:variables
 }

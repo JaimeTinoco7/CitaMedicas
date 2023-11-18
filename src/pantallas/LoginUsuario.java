@@ -7,6 +7,9 @@ package pantallas;
 import entidades.Usuario;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -43,8 +46,8 @@ public class LoginUsuario extends javax.swing.JFrame {
         lblPasswordF = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         lblIniciarSesion = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblOlvidasteContraseña = new javax.swing.JLabel();
+        lblRegistrarse = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,23 +94,23 @@ public class LoginUsuario extends javax.swing.JFrame {
         });
         pnlCentral.add(lblIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, 40));
 
-        jLabel1.setText("¿Olvidaste tu contraseña?");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblOlvidasteContraseña.setText("¿Olvidaste tu contraseña?");
+        lblOlvidasteContraseña.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblOlvidasteContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                lblOlvidasteContraseñaMouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
+        pnlCentral.add(lblOlvidasteContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/No tienes cuenta_ Registrate ahora.png"))); // NOI18N
+        lblRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblRegistrarse.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                lblRegistrarseMouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
+        pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 
@@ -115,18 +118,17 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-        String correo = txtCorreo.getText();
+       String correo = txtCorreo.getText();
 String contraseña = txtPassword.getText();
 
 if (!correo.isEmpty() && !contraseña.isEmpty()) {
     boolean usuarioEncontrado = false;
     Usuario usuarioAutenticado = null;
-    
+
     try (Scanner scanner = new Scanner(new File("usuarios.txt"))) {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] userData = line.split(",");
-            
             if (userData.length >= 5 && correo.equals(userData[3])
                     && contraseña.equals(userData[4])) {
                 usuarioAutenticado = new Usuario(userData[0],
@@ -137,57 +139,48 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
         }
     } catch (FileNotFoundException ex) {
         ex.printStackTrace();
-        JOptionPane.showMessageDialog(this,
-                "Error al abrir el archivo de usuarios.", "Error",
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Error al abrir el archivo de usuarios.", 
+                "Error",
                 JOptionPane.ERROR_MESSAGE);
     }
-    
-    if (usuarioEncontrado && usuarioAutenticado != null) {
-        // Aquí abres la ventana del menú principal
-        MenuUsuario pantallaMenu = new MenuUsuario();
-        pantallaMenu.setUsuarioAutenticado(usuarioAutenticado); // Si tienes un método para establecer el usuario autenticado
-        pantallaMenu.setLocationRelativeTo(this);
-        pantallaMenu.setVisible(true);
-        this.setVisible(false);
+
+    if (usuarioEncontrado) {
+        // Lógica para manejar inicio de sesión exitoso
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Inicio de sesión exitoso.", 
+                "¡Bienvenido!",
+                JOptionPane.INFORMATION_MESSAGE);
+        // Resto del código para manejar la sesión iniciada
     } else {
-        JOptionPane.showMessageDialog(this,
-                "Usuario o contraseña incorrectos.", "Error",
-                JOptionPane.ERROR_MESSAGE);
-        int respuesta = JOptionPane.showConfirmDialog(this,
-                "¿Desea crear una cuenta?",
+        JOptionPane.showMessageDialog(LoginUsuario.this,
+                "Correo o contraseña incorrectos. Inténtalo de nuevo.", 
                 "Error de inicio de sesión",
-                JOptionPane.YES_NO_OPTION,
                 JOptionPane.ERROR_MESSAGE);
-        if (respuesta == JOptionPane.YES_OPTION) {
-            RegisterUsuario pantallaRegistro = new RegisterUsuario();
-            pantallaRegistro.setVisible(true);
-            this.dispose();
-        }
     }
 } else {
-    // Mostrar mensaje si faltan campos
-    JOptionPane.showMessageDialog(this,
-            "Completa los campos de correo y contraseña.", "Error",
+    JOptionPane.showMessageDialog(LoginUsuario.this,
+            "Completa los campos de correo y contraseña.", 
+            "Error",
             JOptionPane.ERROR_MESSAGE);
 }
 
-
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
         RegisterUsuario pantalla = new RegisterUsuario();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-        
-    }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblRegistrarseMouseClicked
+
+    private void lblOlvidasteContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOlvidasteContraseñaMouseClicked
         RecuperarContra pantalla = new RecuperarContra();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblOlvidasteContraseñaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,16 +225,16 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCorreoF;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblIniciarSesion;
     private javax.swing.JLabel lblMediPlus;
+    private javax.swing.JLabel lblOlvidasteContraseña;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblPasswordF;
+    private javax.swing.JLabel lblRegistrarse;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JPasswordField txtPassword;
