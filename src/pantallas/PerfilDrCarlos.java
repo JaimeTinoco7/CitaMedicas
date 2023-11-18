@@ -26,17 +26,26 @@ public class PerfilDrCarlos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+        pnlCentral = new javax.swing.JPanel();
+        lblDrCarlos = new javax.swing.JLabel();
+=======
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollBar1 = new javax.swing.JScrollBar();
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
+>>>>>>> eda96ca4c4a518f1e69505050716574be5e2bf7e
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+<<<<<<< HEAD
+        lblDrCarlos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PerfilDrCarlos.png"))); // NOI18N
+        pnlCentral.add(lblDrCarlos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+=======
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PerfilDrCarlos.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 65, -1, 700));
         jPanel1.add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 4, 19, 760));
@@ -56,18 +65,23 @@ public class PerfilDrCarlos extends javax.swing.JFrame {
         pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
 
         jPanel1.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
+>>>>>>> eda96ca4c4a518f1e69505050716574be5e2bf7e
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> eda96ca4c4a518f1e69505050716574be5e2bf7e
         );
 
         pack();
@@ -116,11 +130,16 @@ public class PerfilDrCarlos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    private javax.swing.JLabel lblDrCarlos;
+    private javax.swing.JPanel pnlCentral;
+=======
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlColor;
+>>>>>>> eda96ca4c4a518f1e69505050716574be5e2bf7e
     // End of variables declaration//GEN-END:variables
 }

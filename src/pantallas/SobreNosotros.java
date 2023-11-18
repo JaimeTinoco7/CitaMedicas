@@ -30,7 +30,7 @@ public class SobreNosotros extends javax.swing.JFrame {
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,8 +54,8 @@ public class SobreNosotros extends javax.swing.JFrame {
 
         pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PortadaSobreNosotros.png"))); // NOI18N
-        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 410, 560));
+        lblInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PortadaSobreNosotros.png"))); // NOI18N
+        pnlCentral.add(lblInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 410, 560));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 680));
 
@@ -232,7 +232,7 @@ public class SobreNosotros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblInfo;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlCentral;

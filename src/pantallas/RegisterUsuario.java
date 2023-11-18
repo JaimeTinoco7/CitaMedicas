@@ -42,7 +42,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
         lblApellidoF = new javax.swing.JLabel();
         lblApellido = new javax.swing.JLabel();
         lblGenero = new javax.swing.JLabel();
-        txtGenero = new javax.swing.JComboBox<>();
+        cbxGenero = new javax.swing.JComboBox<>();
         lblGeneroF = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
         lblCorreoF = new javax.swing.JLabel();
@@ -51,14 +51,14 @@ public class RegisterUsuario extends javax.swing.JFrame {
         lblPasswordF = new javax.swing.JLabel();
         lblContraseña = new javax.swing.JLabel();
         lblPregunta = new javax.swing.JLabel();
-        txtPregunta = new javax.swing.JComboBox<>();
+        cbxPregunta = new javax.swing.JComboBox<>();
         lblPreguntaF = new javax.swing.JLabel();
         txtRespuesta = new javax.swing.JTextField();
         lblRespuestaF = new javax.swing.JLabel();
         lblRespuesta = new javax.swing.JLabel();
         lblRegistrarse = new javax.swing.JLabel();
         lblYaTengoCuenta = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblRegresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,11 +98,11 @@ public class RegisterUsuario extends javax.swing.JFrame {
         lblGenero.setText("Genero:");
         pnlCentral.add(lblGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
-        txtGenero.setBackground(new java.awt.Color(217, 217, 217));
-        txtGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Prefiero no decirlo", " " }));
-        txtGenero.setBorder(null);
-        txtGenero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlCentral.add(txtGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 210, -1));
+        cbxGenero.setBackground(new java.awt.Color(217, 217, 217));
+        cbxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Prefiero no decirlo", " " }));
+        cbxGenero.setBorder(null);
+        cbxGenero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlCentral.add(cbxGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 210, -1));
 
         lblGeneroF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
         pnlCentral.add(lblGeneroF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 230, 40));
@@ -130,11 +130,11 @@ public class RegisterUsuario extends javax.swing.JFrame {
         lblPregunta.setText("Pregunta de Seguridad:");
         pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
 
-        txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
-        txtPregunta.setBorder(null);
-        txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
+        cbxPregunta.setBackground(new java.awt.Color(217, 217, 217));
+        cbxPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        cbxPregunta.setBorder(null);
+        cbxPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlCentral.add(cbxPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
 
         lblPreguntaF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/txtLogin.png"))); // NOI18N
         pnlCentral.add(lblPreguntaF, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 540, 230, 40));
@@ -168,13 +168,13 @@ public class RegisterUsuario extends javax.swing.JFrame {
         });
         pnlCentral.add(lblYaTengoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, 220, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Direccion.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Direccion.png"))); // NOI18N
+        lblRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                lblRegresarMouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 30, 40));
+        pnlCentral.add(lblRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 30, 40));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 760));
 
@@ -184,10 +184,10 @@ public class RegisterUsuario extends javax.swing.JFrame {
     private void lblRegistrarseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegistrarseMouseClicked
         String nombre = txtNombre.getText();//Obtiene el nombre
         String apellido = txtApellido.getText();
-        String genero = (String) txtGenero.getSelectedItem();//Obtiene el item seleccionado
+        String genero = (String) cbxGenero.getSelectedItem();//Obtiene el item seleccionado
         String correo = txtCorreo.getText();
         String contraseña = txtPassword.getText();
-        String preguntaSeguridad = (String) txtPregunta.getSelectedItem();
+        String preguntaSeguridad = (String) cbxPregunta.getSelectedItem();
         String respuestaSeguridad = txtRespuesta.getText();
 
         if (!nombre.isEmpty() && !apellido.isEmpty() && !correo.isEmpty()
@@ -242,12 +242,12 @@ public class RegisterUsuario extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_lblYaTengoCuentaMouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void lblRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresarMouseClicked
         InicioPantalla pantalla = new InicioPantalla();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblRegresarMouseClicked
 
     private boolean contieneSimbolo(String contraseña) {
         for (char c : contraseña.toCharArray()) {
@@ -297,7 +297,8 @@ public class RegisterUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> cbxGenero;
+    private javax.swing.JComboBox<String> cbxPregunta;
     private javax.swing.JLabel lblApellido;
     private javax.swing.JLabel lblApellidoF;
     private javax.swing.JLabel lblAutomanager;
@@ -314,16 +315,15 @@ public class RegisterUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblPreguntaF;
     private javax.swing.JLabel lblRegistrarse;
+    private javax.swing.JLabel lblRegresar;
     private javax.swing.JLabel lblRespuesta;
     private javax.swing.JLabel lblRespuestaF;
     private javax.swing.JLabel lblYaTengoCuenta;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JComboBox<String> txtGenero;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JPasswordField txtPassword;
-    private javax.swing.JComboBox<String> txtPregunta;
     private javax.swing.JTextField txtRespuesta;
     // End of variables declaration//GEN-END:variables
 }
