@@ -85,7 +85,13 @@ public class ListaDeDoctores4 extends javax.swing.JFrame {
         txtDoctor2.setFocusable(false);
         pnlCentral.add(txtDoctor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 200));
 
-        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxDoctores.setMaximumRowCount(10);
+        cbxDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dra. Isamar Benyi Guitierrez", "Dr. Juan Manuel Menedez", "Dr. Marco Mejia Vargas", "Dr. Pablo Moreno Martinez", "Dra. Elizabeth Espinal", "Dra. Angelica Rivera", "Dr. Edgard Chavez", "Ps. Francisco Chavez", "Dr. Carlos Escalante", "Dra. Sivlia De Los Santos" }));
+        cbxDoctores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxDoctoresActionPerformed(evt);
+            }
+        });
         pnlCentral.add(cbxDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 82, 250, 30));
 
         lblSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSiguiente.png"))); // NOI18N
@@ -123,6 +129,60 @@ public class ListaDeDoctores4 extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_lblAtrasMouseClicked
 
+    private void cbxDoctoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxDoctoresActionPerformed
+        String nombreSeleccionado = (String) cbxDoctores.getSelectedItem();
+
+        
+        if (nombreSeleccionado.equals("Dra. Isamar Benyi Guitierrez") ||
+                nombreSeleccionado.equals("Dr. Juan Manuel Menedez")) {
+            abrirListaDeDoctores1();
+        } else if (nombreSeleccionado.equals("Dr. Marco Mejia Vargas") ||
+                nombreSeleccionado.equals("Dr. Pablo Moreno Martinez")) {
+            abrirListaDeDoctores2();
+        } else if (nombreSeleccionado.equals("Dra. Elizabeth Espinal") ||
+                nombreSeleccionado.equals("Dra. Angelica Rivera")) {
+            abrirListaDeDoctores3();
+        } else if (nombreSeleccionado.equals("Dr. Edgard Chavez") ||
+                nombreSeleccionado.equals("Ps. Francisco Chavez")) {
+            abrirListaDeDoctores4();
+        } else if (nombreSeleccionado.equals("Dr. Carlos Escalante") ||
+                nombreSeleccionado.equals("Dra. Sivlia De Los Santos")) {
+            abrirListaDeDoctores5();
+        }
+    
+    }//GEN-LAST:event_cbxDoctoresActionPerformed
+
+    private void abrirListaDeDoctores1() {
+        ListaDeDoctores1 pantalla = new ListaDeDoctores1();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+
+    private void abrirListaDeDoctores2() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores3() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores4() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
+    private void abrirListaDeDoctores5() {
+        ListaDeDoctores2 pantalla = new ListaDeDoctores2();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }
     /**
      * @param args the command line arguments
      */

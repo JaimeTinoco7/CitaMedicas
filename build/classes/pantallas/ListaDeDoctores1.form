@@ -200,15 +200,25 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="cbxDoctores">
           <Properties>
+            <Property name="maximumRowCount" type="int" value="10"/>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="10">
+                <StringItem index="0" value="Dra. Isamar Benyi Guitierrez"/>
+                <StringItem index="1" value="Dr. Juan Manuel Menedez"/>
+                <StringItem index="2" value="Dr. Marco Mejia Vargas"/>
+                <StringItem index="3" value="Dr. Pablo Moreno Martinez"/>
+                <StringItem index="4" value="Dra. Elizabeth Espinal"/>
+                <StringItem index="5" value="Dra. Angelica Rivera"/>
+                <StringItem index="6" value="Dr. Edgard Chavez"/>
+                <StringItem index="7" value="Ps. Francisco Chavez"/>
+                <StringItem index="8" value="Dr. Carlos Escalante"/>
+                <StringItem index="9" value="Dra. Sivlia De Los Santos"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxDoctoresActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
