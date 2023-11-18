@@ -133,7 +133,7 @@ public class ListaDeDoctores5 extends javax.swing.JFrame {
                 nombreSeleccionado.equals("Dra. Sivlia De Los Santos")) {
             abrirListaDeDoctores5();
         }
-    
+        
     }//GEN-LAST:event_cbxDoctoresActionPerformed
 
     private void abrirListaDeDoctores1() {
