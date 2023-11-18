@@ -160,13 +160,15 @@ String fecha = (String) cbxFecha.getSelectedItem();
 String hora = (String) cbxHora.getSelectedItem();
 String motivo = txtaSintomas.getText();
 
-// Validar que todos los campos estén llenos
-if (nombrePaciente.isEmpty() || fecha == null || hora == null || motivo.isEmpty()) {
-    JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos antes de guardar la cita.");
-} else {
-    String archivoCitas = "citas.txt"; // Ruta completa al archivo de citas
 
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivoCitas, true))) {
+if (nombrePaciente.isEmpty() || fecha == null || hora == null || motivo.isEmpty()) {
+    JOptionPane.showMessageDialog(null, 
+            "Por favor, complete todos los campos antes de guardar la cita.");
+} else {
+    String archivoCitas = "citas.txt"; 
+
+    try (BufferedWriter writer = 
+            new BufferedWriter(new FileWriter(archivoCitas, true))) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
 

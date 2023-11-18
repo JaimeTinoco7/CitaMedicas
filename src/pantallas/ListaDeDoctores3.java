@@ -63,9 +63,19 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         pnlCentral.add(lblPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 360, 140));
 
         lblSacarCita1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        lblSacarCita1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSacarCita1MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSacarCita1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 110, 60));
 
         lblVerPerfil1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        lblVerPerfil1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVerPerfil1MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblVerPerfil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 120, 60));
 
         txtDoctor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -76,9 +86,19 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         pnlCentral.add(lblPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 360, 140));
 
         lblSacarCita2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnCitaaa.png"))); // NOI18N
+        lblSacarCita2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblSacarCita2MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblSacarCita2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 110, 60));
 
         lblVerPerfil2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVeeer.png"))); // NOI18N
+        lblVerPerfil2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVerPerfil2MouseClicked(evt);
+            }
+        });
         pnlCentral.add(lblVerPerfil2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 120, 60));
 
         txtDoctor2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -151,6 +171,34 @@ public class ListaDeDoctores3 extends javax.swing.JFrame {
         }
     
     }//GEN-LAST:event_cbxDoctoresActionPerformed
+
+    private void lblSacarCita1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSacarCita1MouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblSacarCita1MouseClicked
+
+    private void lblSacarCita2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSacarCita2MouseClicked
+        AgendarCita pantalla = new AgendarCita();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblSacarCita2MouseClicked
+
+    private void lblVerPerfil1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVerPerfil1MouseClicked
+        PerfilDraElizabeth pantalla = new PerfilDraElizabeth();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblVerPerfil1MouseClicked
+
+    private void lblVerPerfil2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVerPerfil2MouseClicked
+        PerfilDraAngelica pantalla = new PerfilDraAngelica();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblVerPerfil2MouseClicked
 
     private void abrirListaDeDoctores1() {
         ListaDeDoctores1 pantalla = new ListaDeDoctores1();

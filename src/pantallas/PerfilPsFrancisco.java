@@ -28,13 +28,32 @@ public class PerfilPsFrancisco extends javax.swing.JFrame {
 
         pnlCentral = new javax.swing.JPanel();
         lblDrFrancisco = new javax.swing.JLabel();
+        pnlColor = new javax.swing.JPanel();
+        lblRegreso = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblDrFrancisco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PerfilPsFrancisco.png"))); // NOI18N
-        pnlCentral.add(lblDrFrancisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        pnlCentral.add(lblDrFrancisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, 680));
+
+        pnlColor.setBackground(new java.awt.Color(13, 143, 131));
+        pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
+        pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
+
+        lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Doctores.png"))); // NOI18N
+        pnlColor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 16, 220, 40));
+
+        pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,6 +68,13 @@ public class PerfilPsFrancisco extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuUsuario pantalla = new MenuUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -87,6 +113,9 @@ public class PerfilPsFrancisco extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lblDrFrancisco;
+    private javax.swing.JLabel lblRegreso;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlCentral;
+    private javax.swing.JPanel pnlColor;
     // End of variables declaration//GEN-END:variables
 }

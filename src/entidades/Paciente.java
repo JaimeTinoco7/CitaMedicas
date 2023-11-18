@@ -70,9 +70,6 @@ public class Paciente extends Usuario {
         historialMedico.agregarHistorial(historial);
     }
 
-    public void programarCita(Medico medico, Date fechaHora) {
-        Cita cita = new Cita(this, medico, fechaHora);
-        citas.add(cita);
-    }
+ 
 
 }
