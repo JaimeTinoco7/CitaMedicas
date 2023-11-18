@@ -4,6 +4,10 @@
  */
 package pantallas;
 
+import entidades.Medico;
+import entidades.MedicoDatos;
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -12,10 +16,11 @@ package pantallas;
  */
 public class LoginDoctor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InicioPantalla
-     */
-    public LoginDoctor() {
+    private MedicoDatos medicoDatos;
+    
+    public LoginDoctor()
+    {
+
         initComponents();
     }
 
@@ -91,7 +96,36 @@ public class LoginDoctor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-//Poner codigo
+MedicoDatos medicoDatos = new MedicoDatos(); // Intenta inicializar aquí
+    
+    String correo = txtCorreo.getText();
+    String contraseña = txtPassword.getText();
+
+    if (correo.isEmpty() || contraseña.isEmpty()) {
+        JOptionPane.showMessageDialog(LoginDoctor.this,
+                "Completa todos los campos.",
+                "Campos vacíos",
+                JOptionPane.WARNING_MESSAGE);
+    } else {
+        Medico medicoAutenticado = medicoDatos.autenticarMedico(correo, contraseña);
+
+        if (medicoAutenticado != null) {
+            JOptionPane.showMessageDialog(LoginDoctor.this,
+                    "Inicio de sesión exitoso. ¡Bienvenido, " + 
+                            medicoAutenticado.getNombre() + "!");
+            
+            MenuDoctor pantalla = new MenuDoctor(); 
+            pantalla.setVisible(true); 
+            dispose(); 
+        } else {
+            JOptionPane.showMessageDialog(LoginDoctor.this,
+                    "Correo o contraseña incorrectos. Intente de nuevo.",
+                    "Error de inicio de sesión",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
 
     /**

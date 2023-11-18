@@ -2,34 +2,28 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ContactanosDoc.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/EnviarInforme.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores1.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaCitas.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/entidades/Clinica.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/LoginUsuario.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/PerfilDraSilvia.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/MenuDoctor.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/PerfilPsFrancisco.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/SobreNosotros.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/InicioPantalla.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/AgendarCita.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ContactanosUsuario.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores2.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores3.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores5.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/MenuUsuario.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/PerfilDrCarlos.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/BuscarPaciente.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/PerfilDraAngelica.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/entidades/Cita.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/EnviarInformeLab.java</file>
-            <file>file:/C:/Users/anghy/Downloads/TPOO/proyecto/CitasMedicas/src/pantallas/ListaDeDoctores4.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/RegisterUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores3.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/MenuUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/RecuperarContra.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ContactanosDoc.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDraAngelica.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ContactanosUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/EditarPerfil.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/entidades/MedicoDatos.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/LoginDoctor.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/MenuDoctor.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDraSilvia.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores1.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/LoginUsuario.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores4.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/citasm/CitasM.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores2.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/PerfilDrEdgard.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/EnviarInforme.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/pantallas/ListaDeDoctores5.java</file>
+            <file>file:/D:/Git/CitasMedicas/CitasMedicas/src/entidades/Medico.java</file>
         </group>
-=======
-        <group/>
->>>>>>> 1880b6a8cd738b8a56a3b9e60659c0b2c4c79fd5
     </open-files>
 </project-private>
