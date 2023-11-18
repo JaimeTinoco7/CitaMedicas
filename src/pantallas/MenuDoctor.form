@@ -206,7 +206,10 @@
         <Component class="javax.swing.JLabel" name="lblInfoLabDoc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/EnviarInforme.png"/>
+              <Image iconType="3" name="/images/VerInfoooooooooo.png"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[90, 90]"/>
             </Property>
           </Properties>
           <Events>

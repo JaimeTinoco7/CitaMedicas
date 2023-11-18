@@ -78,15 +78,15 @@ public class VerInformeLab extends javax.swing.JFrame {
         informeTextArea.setRows(5);
         jScrollPane1.setViewportView(informeTextArea);
 
-        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 370, 300));
+        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 370, 300));
 
-        jLabel1.setText("Ver Informe");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Mostrar.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
             }
         });
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
+        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, -1, -1));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 

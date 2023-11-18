@@ -71,7 +71,8 @@ public class MenuDoctor extends javax.swing.JFrame {
         pnlCentral.setBackground(new java.awt.Color(13, 143, 131));
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblInfoLabDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/EnviarInforme.png"))); // NOI18N
+        lblInfoLabDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerInfoooooooooo.png"))); // NOI18N
+        lblInfoLabDoc.setPreferredSize(new java.awt.Dimension(90, 90));
         lblInfoLabDoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblInfoLabDocMouseClicked(evt);
