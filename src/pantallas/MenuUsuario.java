@@ -196,6 +196,11 @@ public class MenuUsuario extends javax.swing.JFrame {
                 jMenuItem6MouseClicked(evt);
             }
         });
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         mbMenuPrincipal1.add(jMenuItem6);
 
         mbMenuPrincipal.add(mbMenuPrincipal1);
@@ -291,6 +296,10 @@ public class MenuUsuario extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnEditarPacMouseClicked
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
