@@ -1,0 +1,3 @@
+Nombre1,Apellido1,Especialidad1,correo1@ejemplo.com,contraseña1
+Nombre2,Apellido2,Especialidad2,correo2@ejemplo.com,contraseña2
+Nombre3,Apellido3,Especialidad3,correo3@ejemplo.com,contraseña3
