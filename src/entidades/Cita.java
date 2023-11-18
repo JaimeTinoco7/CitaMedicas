@@ -21,6 +21,13 @@ public class Cita {
         this.motivo = motivo;
     }
 
+    public Cita(String paciente, Date fecha, Date hora) {
+        this.paciente = paciente;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+    
+
     public Cita(){}
 
     public String getPaciente() {
@@ -53,6 +60,9 @@ public class Cita {
 
     public void setMotivo(String motivo) {
         this.motivo = motivo;
+    }
+    public String getTexto() {
+        return this.paciente + " | " + this.fecha + " | " + this.hora;
     }
 }
 

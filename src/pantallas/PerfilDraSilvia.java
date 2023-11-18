@@ -70,10 +70,11 @@ public class PerfilDraSilvia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
-        MenuUsuario pantalla = new MenuUsuario();
+        ListaDeDoctores5 pantalla = new ListaDeDoctores5();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
+
     }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**

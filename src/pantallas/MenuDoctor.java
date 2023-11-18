@@ -27,7 +27,7 @@ public class MenuDoctor extends javax.swing.JFrame {
         if (medicoAutenticado != null) {
             String nombreUsuario = medicoAutenticado.getNombre();
             String apellidosUsuario = medicoAutenticado.getApellidos();
-            jMenuUsuario.setText("Usuario: " + nombreUsuario + " " + apellidosUsuario);
+            jMenuUsuario.setText("Doctor: " + nombreUsuario + " " + apellidosUsuario);
         }
     }
 

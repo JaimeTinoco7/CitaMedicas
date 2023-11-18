@@ -133,7 +133,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, -1, -1));
 
         cbxPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        cbxPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        cbxPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es tu comida favorita?" }));
         cbxPregunta.setBorder(null);
         cbxPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlCentral.add(cbxPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 550, 210, -1));
@@ -171,6 +171,7 @@ public class RegisterUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblYaTengoCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 700, 220, 20));
 
         lblRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Direccion.png"))); // NOI18N
+        lblRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblRegresarMouseClicked(evt);

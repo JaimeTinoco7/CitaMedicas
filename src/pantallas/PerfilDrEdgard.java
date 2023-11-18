@@ -72,10 +72,11 @@ public class PerfilDrEdgard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
-        MenuUsuario pantalla = new MenuUsuario();
+        ListaDeDoctores4 pantalla = new ListaDeDoctores4();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
+
     }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**

@@ -40,6 +40,7 @@ public class SobreNosotrosDoc extends javax.swing.JFrame {
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DireccionDoc.png"))); // NOI18N
+        lblRegreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblRegresoMouseClicked(evt);

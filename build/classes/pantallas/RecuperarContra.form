@@ -103,7 +103,7 @@
                 <StringItem index="0" value="&#xbf;Cu&#xe1;l es tu nick de jugador?"/>
                 <StringItem index="1" value="&#xbf;En qu&#xe9; ciudad naciste?"/>
                 <StringItem index="2" value="&#xbf;Cu&#xe1;l es tu pel&#xed;cula o libro favorito?"/>
-                <StringItem index="3" value="&#xbf;Cu&#xe1;l es el nombre de tu abuelo materno?"/>
+                <StringItem index="3" value="&#xbf;Cu&#xe1;l es tu comida favorita?"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -280,6 +280,9 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/DireccionDoc.png"/>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>

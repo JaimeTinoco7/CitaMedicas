@@ -161,6 +161,7 @@ public final class AgendarCita extends javax.swing.JFrame {
         pnlCentral.add(lblSintomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
 
         lblGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnGuardar.png"))); // NOI18N
+        lblGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblGuardarMouseClicked(evt);
@@ -183,22 +184,23 @@ public final class AgendarCita extends javax.swing.JFrame {
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
 
         String nombrePaciente = txtNombre.getText();
-String apellidoPaciente = txtApellido.getText(); 
-String fecha = (String) cbxFecha.getSelectedItem();
-String hora = (String) cbxHora.getSelectedItem();
-String doctorSeleccionado = (String) cbxListaDoctores.getSelectedItem();
-String motivo = txtaSintomas.getText();
+        String apellidoPaciente = txtApellido.getText();
+        String fecha = (String) cbxFecha.getSelectedItem();
+        String hora = (String) cbxHora.getSelectedItem();
+        String doctorSeleccionado = (String) cbxListaDoctores.getSelectedItem();
+        String motivo = txtaSintomas.getText();
 
 if (nombrePaciente.isEmpty() || apellidoPaciente.isEmpty() || 
     fecha == null || hora == null || motivo.isEmpty()) {
     JOptionPane.showMessageDialog(null, 
-            "Por favor, complete todos los campos"
-                    + " antes de guardar la cita.");
+            "Por favor, complete todos los campos "
+                    + "antes de guardar la cita.");
 } else {
     List<String> horariosOcupados = horariosDoctores.get(doctorSeleccionado);
     if (horariosOcupados.contains(hora)) {
         JOptionPane.showMessageDialog(null, 
-                "El horario seleccionado para este doctor ya está ocupado.");
+                "El horario seleccionado para este"
+                        + " doctor ya está ocupado.");
     } else {
         horariosOcupados.add(hora);
 
@@ -206,17 +208,25 @@ if (nombrePaciente.isEmpty() || apellidoPaciente.isEmpty() ||
                 "," + fecha + "," + hora + "," + motivo;
 
         try (BufferedWriter writer = 
-                new BufferedWriter(new FileWriter("citas.txt", true))) {
+                new BufferedWriter
+        (new FileWriter("citas.txt", true))) {
             writer.write(citaAGuardar);
             writer.newLine();
             JOptionPane.showMessageDialog(null, 
                     "Cita guardada con éxito");
+
+            txtNombre.setText("");
+            txtApellido.setText("");
+            cbxFecha.setSelectedIndex(0);
+            cbxHora.setSelectedIndex(0);
+            txtaSintomas.setText("");
         } catch (IOException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, 
                     "Error al guardar la cita");
         }
     }
+    
 }
 
 

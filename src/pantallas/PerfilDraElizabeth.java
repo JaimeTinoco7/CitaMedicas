@@ -67,10 +67,11 @@ public class PerfilDraElizabeth extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
-        MenuUsuario pantalla = new MenuUsuario();
+        ListaDeDoctores3 pantalla = new ListaDeDoctores3();
         pantalla.setLocationRelativeTo(this);
         pantalla.setVisible(true);
         this.setVisible(false);
+
     }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**

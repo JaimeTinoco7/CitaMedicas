@@ -48,6 +48,7 @@ public class LoginUsuario extends javax.swing.JFrame {
         lblIniciarSesion = new javax.swing.JLabel();
         lblOlvidasteContraseña = new javax.swing.JLabel();
         lblRegistrarse = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -111,6 +112,14 @@ public class LoginUsuario extends javax.swing.JFrame {
             }
         });
         pnlCentral.add(lblRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 270, 20));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DireccionDoc.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        pnlCentral.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 440, 650));
 
@@ -190,6 +199,14 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
         this.setVisible(false);
     }//GEN-LAST:event_lblOlvidasteContraseñaMouseClicked
 
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        RegisterUsuario pantalla = new RegisterUsuario();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_jLabel4MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -233,6 +250,7 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblAutomanager;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblCorreoF;

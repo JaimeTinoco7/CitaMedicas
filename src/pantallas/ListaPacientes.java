@@ -44,6 +44,11 @@ public class ListaPacientes extends javax.swing.JFrame {
         pnlColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
         pnlColor.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 50));
 
         lblTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Lista de Pacientes.png"))); // NOI18N
@@ -126,6 +131,13 @@ public class ListaPacientes extends javax.swing.JFrame {
     private void cbPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPacientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbPacientesActionPerformed
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        MenuDoctor pantalla = new MenuDoctor();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**
      * @param args the command line arguments

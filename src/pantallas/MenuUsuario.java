@@ -73,6 +73,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblInfoLabPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerResultados.png"))); // NOI18N
+        lblInfoLabPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblInfoLabPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblInfoLabPacMouseClicked(evt);
@@ -81,9 +82,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblInfoLabPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 100, 90));
 
         lblListaCitasPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ListaDeCitas.png"))); // NOI18N
+        lblListaCitasPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlCentral.add(lblListaCitasPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 100, 90));
 
         lblAgendarCitaPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AgendarCita.png"))); // NOI18N
+        lblAgendarCitaPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblAgendarCitaPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblAgendarCitaPacMouseClicked(evt);
@@ -92,6 +95,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblAgendarCitaPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 90));
 
         lblBuscarDocPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/BuscarDoctor.png"))); // NOI18N
+        lblBuscarDocPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblBuscarDocPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblBuscarDocPacMouseClicked(evt);
@@ -100,6 +104,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblBuscarDocPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 100, 90));
 
         lblSobreNosotrosPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros.png"))); // NOI18N
+        lblSobreNosotrosPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblSobreNosotrosPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSobreNosotrosPacMouseClicked(evt);
@@ -111,6 +116,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         pnlCentral.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 360, 180));
 
         lblContactanosPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos.png"))); // NOI18N
+        lblContactanosPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblContactanosPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblContactanosPacMouseClicked(evt);
@@ -153,6 +159,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         mbMenuPrincipal1.add(jSeparator1);
 
         btnVerCitaPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerCita.png"))); // NOI18N
+        btnVerCitaPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVerCitaPac.setPreferredSize(new java.awt.Dimension(191, 50));
         btnVerCitaPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -163,6 +170,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         mbMenuPrincipal1.add(jSeparator3);
 
         btnContactanosPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contactanos (2).png"))); // NOI18N
+        btnContactanosPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnContactanosPac.setPreferredSize(new java.awt.Dimension(230, 50));
         btnContactanosPac.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -173,10 +181,11 @@ public class MenuUsuario extends javax.swing.JFrame {
         mbMenuPrincipal1.add(jSeparator5);
 
         btnSobreNosotrosPac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SobreNosotros2.png"))); // NOI18N
+        btnSobreNosotrosPac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSobreNosotrosPac.setPreferredSize(new java.awt.Dimension(202, 50));
-        btnSobreNosotrosPac.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnSobreNosotrosPacMouseClicked(evt);
+        btnSobreNosotrosPac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSobreNosotrosPacActionPerformed(evt);
             }
         });
         mbMenuPrincipal1.add(btnSobreNosotrosPac);
@@ -252,13 +261,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnContactanosPacMouseClicked
 
-    private void btnSobreNosotrosPacMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSobreNosotrosPacMouseClicked
-        SobreNosotros pantalla = new SobreNosotros();
-        pantalla.setLocationRelativeTo(null);
-        pantalla.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnSobreNosotrosPacMouseClicked
-
     private void btnVerCitaPacMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerCitaPacMouseClicked
         ListaCitas pantalla = new ListaCitas();
         pantalla.setLocationRelativeTo(null);
@@ -286,6 +288,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblInfoLabPacMouseClicked
+
+    private void btnSobreNosotrosPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSobreNosotrosPacActionPerformed
+        SobreNosotros pantalla = new SobreNosotros();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnSobreNosotrosPacActionPerformed
 
     /**
      * @param args the command line arguments

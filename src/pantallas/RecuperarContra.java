@@ -68,7 +68,7 @@ public class RecuperarContra extends javax.swing.JFrame {
         pnlCentral.add(txtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 210, -1));
 
         txtPregunta.setBackground(new java.awt.Color(217, 217, 217));
-        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es el nombre de tu abuelo materno?" }));
+        txtPregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿Cuál es tu nick de jugador?", "¿En qué ciudad naciste?", "¿Cuál es tu película o libro favorito?", "¿Cuál es tu comida favorita?" }));
         txtPregunta.setBorder(null);
         txtPregunta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pnlCentral.add(txtPregunta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
@@ -119,6 +119,7 @@ public class RecuperarContra extends javax.swing.JFrame {
         pnlCentral.add(txtPregunta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 210, -1));
 
         lblRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DireccionDoc.png"))); // NOI18N
+        lblRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblRegresarMouseClicked(evt);

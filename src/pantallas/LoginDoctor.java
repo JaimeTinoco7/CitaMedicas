@@ -20,6 +20,7 @@ public class LoginDoctor extends javax.swing.JFrame {
     
     public LoginDoctor()
     {
+        medicoDatos = new MedicoDatos();
 
         initComponents();
     }
@@ -40,6 +41,7 @@ public class LoginDoctor extends javax.swing.JFrame {
         txtCorreo = new javax.swing.JTextField();
         lblCorreoF = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
+        lblRegreso = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
         lblPasswordF = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
@@ -71,6 +73,15 @@ public class LoginDoctor extends javax.swing.JFrame {
         txtPassword.setBorder(null);
         pnlCentral.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 200, 20));
 
+        lblRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Atraas.png"))); // NOI18N
+        lblRegreso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblRegreso.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRegresoMouseClicked(evt);
+            }
+        });
+        pnlCentral.add(lblRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, 50));
+
         lblCorreo.setText("Correo");
         pnlCentral.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, -1, -1));
 
@@ -96,37 +107,46 @@ public class LoginDoctor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-MedicoDatos medicoDatos = new MedicoDatos(); // Intenta inicializar aquí
-    
-    String correo = txtCorreo.getText();
-    String contraseña = txtPassword.getText();
 
-    if (correo.isEmpty() || contraseña.isEmpty()) {
-        JOptionPane.showMessageDialog(LoginDoctor.this,
-                "Completa todos los campos.",
-                "Campos vacíos",
-                JOptionPane.WARNING_MESSAGE);
-    } else {
-        Medico medicoAutenticado = medicoDatos.autenticarMedico(correo, contraseña);
+        String correo = txtCorreo.getText();
+        String contraseña = new String(txtPassword.getPassword());
 
-        if (medicoAutenticado != null) {
+        if (correo.isEmpty() || contraseña.isEmpty()) {
             JOptionPane.showMessageDialog(LoginDoctor.this,
-                    "Inicio de sesión exitoso. ¡Bienvenido, " + 
-                            medicoAutenticado.getNombre() + "!");
-            
-            MenuDoctor pantalla = new MenuDoctor(); 
-            pantalla.setVisible(true); 
-            dispose(); 
+                    "Completa todos los campos.",
+                    "Campos vacíos",
+                    JOptionPane.WARNING_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(LoginDoctor.this,
-                    "Correo o contraseña incorrectos. Intente de nuevo.",
-                    "Error de inicio de sesión",
-                    JOptionPane.ERROR_MESSAGE);
+            Medico medicoAutenticado =
+                    medicoDatos.autenticarMedico(correo, contraseña);
+
+            if (medicoAutenticado != null) {
+                JOptionPane.showMessageDialog(LoginDoctor.this,
+                        "Inicio de sesión exitoso. ¡Bienvenido, " +
+                                medicoAutenticado.getNombre() + "!");
+                
+                MenuDoctor pantalla = new MenuDoctor();
+                pantalla.setUsuarioAutenticado(medicoAutenticado); 
+                pantalla.setVisible(true);
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(LoginDoctor.this,
+                        "Correo o contraseña incorrectos."
+                                + " Intente de nuevo.",
+                        "Error de inicio de sesión",
+                        JOptionPane.ERROR_MESSAGE);
+            }
         }
-    }
 
     
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
+
+    private void lblRegresoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegresoMouseClicked
+        InicioPantalla pantalla = new InicioPantalla();
+        pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lblRegresoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,6 +207,7 @@ MedicoDatos medicoDatos = new MedicoDatos(); // Intenta inicializar aquí
     private javax.swing.JLabel lblMediPlus;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblPasswordF;
+    private javax.swing.JLabel lblRegreso;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JPasswordField txtPassword;

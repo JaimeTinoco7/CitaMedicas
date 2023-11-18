@@ -77,15 +77,15 @@ public class InicioPantalla extends javax.swing.JFrame {
 
     private void lblPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPacienteMouseClicked
         RegisterUsuario pantalla = new  RegisterUsuario();
-        pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblPacienteMouseClicked
 
     private void lblDoctorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblDoctorMouseClicked
         LoginDoctor pantalla = new  LoginDoctor();
-        pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(this);
+        pantalla.setVisible(true);
         this.setVisible(false);
         //
     }//GEN-LAST:event_lblDoctorMouseClicked
