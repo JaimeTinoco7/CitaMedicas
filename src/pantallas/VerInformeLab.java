@@ -4,16 +4,29 @@
  */
 package pantallas;
 
+import entidades.Usuario;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jaime
  */
 public class VerInformeLab extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InicioPantalla
-     */
-    public VerInformeLab() {
+    private Map<String, String> informesUsuarios = new HashMap<>();
+        private Usuario usuarioAutenticado;
+
+       
+
+
+     
+   public VerInformeLab( ) {
         initComponents();
     }
 
@@ -30,12 +43,10 @@ public class VerInformeLab extends javax.swing.JFrame {
         pnlColor = new javax.swing.JPanel();
         lblRegreso = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        informeTextArea = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -59,24 +70,23 @@ public class VerInformeLab extends javax.swing.JFrame {
 
         pnlCentral.add(pnlColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 65));
 
-        pnlCentral.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 270, 30));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("Paciente:");
-        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Informe:");
-        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        pnlCentral.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        informeTextArea.setColumns(20);
+        informeTextArea.setRows(5);
+        jScrollPane1.setViewportView(informeTextArea);
 
-        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 370, 300));
+        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 370, 300));
 
-        jButton1.setText("Ver Informe");
-        pnlCentral.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, -1, -1));
+        jLabel1.setText("Ver Informe");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        pnlCentral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 510, -1, -1));
 
         getContentPane().add(pnlCentral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 630));
 
@@ -89,6 +99,28 @@ public class VerInformeLab extends javax.swing.JFrame {
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblRegresoMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    String informe = obtenerInformeDesdeArchivo("informes.txt");
+    informeTextArea.setText(informe);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+
+private String obtenerInformeDesdeArchivo(String archivo) {
+    StringBuilder informe = new StringBuilder();
+    try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
+        String linea;
+        while ((linea = reader.readLine()) != null) {
+            informe.append(linea).append("\n");
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al leer el informe");
+    }
+    return informe.toString();
+}
+ 
+
 
     /**
      * @param args the command line arguments
@@ -381,12 +413,10 @@ public class VerInformeLab extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextArea informeTextArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblRegreso;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlCentral;

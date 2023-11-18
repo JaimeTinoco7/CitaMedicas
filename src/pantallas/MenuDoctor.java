@@ -54,8 +54,6 @@ public class MenuDoctor extends javax.swing.JFrame {
         jMenuUsuario = new javax.swing.JMenuItem();
         jSeparator7 = new javax.swing.JPopupMenu.Separator();
         btnMenuDoc = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        btnEditarDoc = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         btnListaCitasDoc = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
@@ -146,7 +144,7 @@ public class MenuDoctor extends javax.swing.JFrame {
         mbMenuPrincipal1.add(jSeparator6);
 
         jMenuUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Perfil.png"))); // NOI18N
-        jMenuUsuario.setText("Usuario");
+        jMenuUsuario.setText("¡Bienvenido!");
         jMenuUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jMenuUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jMenuUsuario.setPreferredSize(new java.awt.Dimension(300, 85));
@@ -157,12 +155,6 @@ public class MenuDoctor extends javax.swing.JFrame {
         btnMenuDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMenuDoc.setPreferredSize(new java.awt.Dimension(160, 50));
         mbMenuPrincipal1.add(btnMenuDoc);
-        mbMenuPrincipal1.add(jSeparator2);
-
-        btnEditarDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Edtar.png"))); // NOI18N
-        btnEditarDoc.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarDoc.setPreferredSize(new java.awt.Dimension(160, 50));
-        mbMenuPrincipal1.add(btnEditarDoc);
         mbMenuPrincipal1.add(jSeparator1);
 
         btnListaCitasDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/VerCita.png"))); // NOI18N
@@ -197,6 +189,11 @@ public class MenuDoctor extends javax.swing.JFrame {
 
         btnCerrarSesionDoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CerrarSession.png"))); // NOI18N
         btnCerrarSesionDoc.setPreferredSize(new java.awt.Dimension(202, 50));
+        btnCerrarSesionDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionDocActionPerformed(evt);
+            }
+        });
         mbMenuPrincipal1.add(btnCerrarSesionDoc);
 
         mbMenuPrincipal.add(mbMenuPrincipal1);
@@ -224,63 +221,63 @@ public class MenuDoctor extends javax.swing.JFrame {
 
     private void lblContactosDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblContactosDocMouseClicked
         ContactanosUsuario pantalla = new ContactanosUsuario();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblContactosDocMouseClicked
 
     private void lblRevisarCitaDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRevisarCitaDocMouseClicked
         RevisarCita pantalla = new RevisarCita();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblRevisarCitaDocMouseClicked
 
     private void lblSobreNosotrosDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSobreNosotrosDocMouseClicked
         SobreNosotros pantalla = new SobreNosotros();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblSobreNosotrosDocMouseClicked
 
     private void lblInfoLabDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblInfoLabDocMouseClicked
         EnviarInformeLab pantalla = new EnviarInformeLab();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblInfoLabDocMouseClicked
 
     private void lblBuscarDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarDocMouseClicked
         BuscarPaciente pantalla = new BuscarPaciente();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblBuscarDocMouseClicked
 
     private void lblListaCitasDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblListaCitasDocMouseClicked
         ListaPacientes pantalla = new ListaPacientes();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_lblListaCitasDocMouseClicked
 
     private void btnContactanosDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContactanosDocMouseClicked
         ContactanosDoc pantalla = new ContactanosDoc();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnContactanosDocMouseClicked
 
     private void btnSobreNosotrosDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSobreNosotrosDocMouseClicked
         SobreNosotrosDoc pantalla = new SobreNosotrosDoc();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnSobreNosotrosDocMouseClicked
 
     private void btnListaCitasDocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnListaCitasDocMouseClicked
         ListaCitas pantalla = new ListaCitas();
-        pantalla.setLocationRelativeTo(this);
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnListaCitasDocMouseClicked
@@ -288,6 +285,13 @@ public class MenuDoctor extends javax.swing.JFrame {
     private void mbMenuPrincipal1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mbMenuPrincipal1MouseClicked
        
     }//GEN-LAST:event_mbMenuPrincipal1MouseClicked
+
+    private void btnCerrarSesionDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionDocActionPerformed
+        LoginDoctor pantalla = new LoginDoctor();
+        pantalla.setLocationRelativeTo(null);
+        pantalla.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCerrarSesionDocActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,7 +346,6 @@ public class MenuDoctor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem btnCerrarSesionDoc;
     private javax.swing.JMenuItem btnContactanosDoc;
-    private javax.swing.JMenuItem btnEditarDoc;
     private javax.swing.JMenuItem btnListaCitasDoc;
     private javax.swing.JMenuItem btnMenuDoc;
     private javax.swing.JMenuItem btnSobreNosotrosDoc;
@@ -350,7 +353,6 @@ public class MenuDoctor extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuUsuario;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;

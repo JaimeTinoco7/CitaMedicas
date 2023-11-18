@@ -120,7 +120,7 @@ public class LoginUsuario extends javax.swing.JFrame {
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
 
         String correo = txtCorreo.getText();
-String contraseña = txtPassword.getText();
+        String contraseña = txtPassword.getText();
 
 if (!correo.isEmpty() && !contraseña.isEmpty()) {
     boolean usuarioEncontrado = false;

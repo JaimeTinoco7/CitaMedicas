@@ -181,30 +181,31 @@ public final class AgendarCita extends javax.swing.JFrame {
     }//GEN-LAST:event_lblRegresoMouseClicked
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
-String nombrePaciente = txtNombre.getText();
-        String fecha = (String) cbxFecha.getSelectedItem();
-        String hora = (String) cbxHora.getSelectedItem();
-        String doctorSeleccionado = (String) cbxListaDoctores.getSelectedItem();
-        String motivo = txtaSintomas.getText();
 
-     if (nombrePaciente.isEmpty() || 
-             fecha == null || hora == null || motivo.isEmpty()) {
-    JOptionPane.showMessageDialog(null, "Por favor,"
-            + " complete todos los campos antes de guardar la cita.");
+        String nombrePaciente = txtNombre.getText();
+String apellidoPaciente = txtApellido.getText(); 
+String fecha = (String) cbxFecha.getSelectedItem();
+String hora = (String) cbxHora.getSelectedItem();
+String doctorSeleccionado = (String) cbxListaDoctores.getSelectedItem();
+String motivo = txtaSintomas.getText();
+
+if (nombrePaciente.isEmpty() || apellidoPaciente.isEmpty() || 
+    fecha == null || hora == null || motivo.isEmpty()) {
+    JOptionPane.showMessageDialog(null, 
+            "Por favor, complete todos los campos"
+                    + " antes de guardar la cita.");
 } else {
     List<String> horariosOcupados = horariosDoctores.get(doctorSeleccionado);
     if (horariosOcupados.contains(hora)) {
         JOptionPane.showMessageDialog(null, 
-                "El horario seleccionado para este"
-                        + " doctor ya está ocupado.");
+                "El horario seleccionado para este doctor ya está ocupado.");
     } else {
         horariosOcupados.add(hora);
 
-        String citaAGuardar = nombrePaciente + "," + fecha + 
-                "," + hora + "," + motivo;
+        String citaAGuardar = nombrePaciente + "," + apellidoPaciente +
+                "," + fecha + "," + hora + "," + motivo;
 
-       
-      try (BufferedWriter writer = 
+        try (BufferedWriter writer = 
                 new BufferedWriter(new FileWriter("citas.txt", true))) {
             writer.write(citaAGuardar);
             writer.newLine();
@@ -216,7 +217,8 @@ String nombrePaciente = txtNombre.getText();
                     "Error al guardar la cita");
         }
     }
-     }
+}
+
 
     }//GEN-LAST:event_lblGuardarMouseClicked
 
