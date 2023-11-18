@@ -118,7 +118,8 @@ public class LoginUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblIniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarSesionMouseClicked
-       String correo = txtCorreo.getText();
+
+        String correo = txtCorreo.getText();
 String contraseña = txtPassword.getText();
 
 if (!correo.isEmpty() && !contraseña.isEmpty()) {
@@ -146,24 +147,31 @@ if (!correo.isEmpty() && !contraseña.isEmpty()) {
     }
 
     if (usuarioEncontrado) {
-        // Lógica para manejar inicio de sesión exitoso
+       
         JOptionPane.showMessageDialog(LoginUsuario.this,
                 "Inicio de sesión exitoso.", 
                 "¡Bienvenido!",
                 JOptionPane.INFORMATION_MESSAGE);
-        // Resto del código para manejar la sesión iniciada
-    } else {
-        JOptionPane.showMessageDialog(LoginUsuario.this,
-                "Correo o contraseña incorrectos. Inténtalo de nuevo.", 
-                "Error de inicio de sesión",
-                JOptionPane.ERROR_MESSAGE);
-    }
+        
+        
+    MenuUsuario pantalla = new MenuUsuario();
+    pantalla.setUsuarioAutenticado(usuarioAutenticado); 
+    pantalla.setLocationRelativeTo(null);
+    pantalla.setVisible(true);
+    dispose();
+  } else {
+    JOptionPane.showMessageDialog(LoginUsuario.this,
+            "Correo o contraseña incorrectos. Inténtalo de nuevo.", 
+            "Error de inicio de sesión",
+            JOptionPane.ERROR_MESSAGE);
+}
 } else {
     JOptionPane.showMessageDialog(LoginUsuario.this,
             "Completa los campos de correo y contraseña.", 
             "Error",
             JOptionPane.ERROR_MESSAGE);
 }
+
 
     }//GEN-LAST:event_lblIniciarSesionMouseClicked
 

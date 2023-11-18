@@ -9,8 +9,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,10 +23,13 @@ import javax.swing.JOptionPane;
  */
 public final class AgendarCita extends javax.swing.JFrame {
 
-    
+        private Map<String, List<String>> horariosDoctores;
+
     private static final String archivoUsuarios = "datos/citas.txt";
     
     public AgendarCita() {
+           horariosDoctores = new HashMap<>();
+        inicializarHorariosDoctores();
         initComponents();
         fecha_combo();
         hora_combo();
@@ -43,13 +50,31 @@ public final class AgendarCita extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm a");
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 9);
-        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.MINUTE, 10);
 
         while (calendar.get(Calendar.HOUR_OF_DAY) < 18
                 || (calendar.get(Calendar.HOUR_OF_DAY) == 18
                 && calendar.get(Calendar.MINUTE) == 0)) {
             cbxHora.addItem(sdf.format(calendar.getTime()));
-            calendar.add(Calendar.MINUTE, 1);
+            calendar.add(Calendar.MINUTE, 10);
+        }
+    }
+      private void inicializarHorariosDoctores() {
+        String[] nombresDoctores = {
+            "Dra. Isamar Benyi", 
+            "Dr. Juan Menédez", 
+            "Dr. Marco Mejia",
+            "Dr. Pablo Moreno", 
+            "Dra. Elizabeth Espinal", 
+            "Dra. Angélica Rivera",
+            "Dr. Edgar Chávez", 
+            "Ps. Francisco Chávez",
+            "Dr. Carlos Escalante ",
+            "Dra. Silvia De Los Santos"
+        };
+
+        for (String doctor : nombresDoctores) {
+            horariosDoctores.put(doctor, new ArrayList<>());
         }
     }
 
@@ -106,7 +131,8 @@ public final class AgendarCita extends javax.swing.JFrame {
         txtApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlCentral.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 250, 40));
 
-        cbxListaDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dra. Isamar Benyi", "Dr. Juan Menédez", "Dr. Marco Mejia", "Dr. Pablo Moreno", "Dra. Elizabeth Espinal", "Dra. Angélica Rivera", "Dr. Edgar Chávez", "Ps. Francisco Chávez", "Dra. Silvia De Los Santos", " " }));
+        cbxListaDoctores.setMaximumRowCount(10);
+        cbxListaDoctores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dra. Isamar Benyi", "Dr. Juan Menédez", "Dr. Marco Mejia", "Dr. Pablo Moreno", "Dra. Elizabeth Espinal", "Dra. Angélica Rivera", "Dr. Edgar Chávez", "Ps. Francisco Chávez", "Dr. Carlos Escalante", "Dra. Silvia De Los Santos", " " }));
         cbxListaDoctores.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnlCentral.add(cbxListaDoctores, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 250, 40));
 
@@ -156,36 +182,41 @@ public final class AgendarCita extends javax.swing.JFrame {
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
 String nombrePaciente = txtNombre.getText();
-String fecha = (String) cbxFecha.getSelectedItem();
-String hora = (String) cbxHora.getSelectedItem();
-String motivo = txtaSintomas.getText();
+        String fecha = (String) cbxFecha.getSelectedItem();
+        String hora = (String) cbxHora.getSelectedItem();
+        String doctorSeleccionado = (String) cbxListaDoctores.getSelectedItem();
+        String motivo = txtaSintomas.getText();
 
-
-if (nombrePaciente.isEmpty() || fecha == null || hora == null || motivo.isEmpty()) {
-    JOptionPane.showMessageDialog(null, 
-            "Por favor, complete todos los campos antes de guardar la cita.");
+     if (nombrePaciente.isEmpty() || 
+             fecha == null || hora == null || motivo.isEmpty()) {
+    JOptionPane.showMessageDialog(null, "Por favor,"
+            + " complete todos los campos antes de guardar la cita.");
 } else {
-    String archivoCitas = "citas.txt"; 
+    List<String> horariosOcupados = horariosDoctores.get(doctorSeleccionado);
+    if (horariosOcupados.contains(hora)) {
+        JOptionPane.showMessageDialog(null, 
+                "El horario seleccionado para este"
+                        + " doctor ya está ocupado.");
+    } else {
+        horariosOcupados.add(hora);
 
-    try (BufferedWriter writer = 
-            new BufferedWriter(new FileWriter(archivoCitas, true))) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+        String citaAGuardar = nombrePaciente + "," + fecha + 
+                "," + hora + "," + motivo;
 
-        Date date = dateFormat.parse(fecha);
-        Date time = timeFormat.parse(hora);
-
-        String formattedFecha = dateFormat.format(date);
-        String formattedHora = timeFormat.format(time);
-
-        writer.write(nombrePaciente + "," + formattedFecha + "," + formattedHora + "," + motivo);
-        writer.newLine();
-        JOptionPane.showMessageDialog(null, "Cita guardada con éxito");
-    } catch (IOException | ParseException e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(null, "Error al guardar la cita");
+       
+      try (BufferedWriter writer = 
+                new BufferedWriter(new FileWriter("citas.txt", true))) {
+            writer.write(citaAGuardar);
+            writer.newLine();
+            JOptionPane.showMessageDialog(null, 
+                    "Cita guardada con éxito");
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, 
+                    "Error al guardar la cita");
+        }
     }
-}
+     }
 
     }//GEN-LAST:event_lblGuardarMouseClicked
 
